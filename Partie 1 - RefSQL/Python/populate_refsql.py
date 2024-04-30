@@ -95,17 +95,32 @@ def populate_ref_sql () :
             for elem in cur : 
                 list_of_filters_same_cha.append(elem)
             
-            if list_of_filters_same_cha[0][5] == "TEMPS" : 
-                
+            if list_of_filters_same_cha[0][5] == "TEMPS" and list_of_filters_same_cha[0][11].strip().lower() == "inclure" : 
+            
                 condition_temps = f" AND {cha[0]} = "
                 for filtre_same_cha in list_of_filters_same_cha :
                     PERD = filtre_same_cha[10]
                     condition_temps = condition_temps + code_to_date(filtre_same_cha[10]) +","
                 total_condition_col += condition_temps[0:-1] + ""
+
+            elif list_of_filters_same_cha[0][5] == "TEMPS" and list_of_filters_same_cha[0][11].strip().lower() == "exclure" : 
             
-            elif list_of_filters_same_cha[0][5] == "DIMENSION": 
+                condition_temps = f" AND NOT {cha[0]} = "
+                for filtre_same_cha in list_of_filters_same_cha :
+                    PERD = filtre_same_cha[10]
+                    condition_temps = condition_temps + code_to_date(filtre_same_cha[10]) +","
+                total_condition_col += condition_temps[0:-1] + ""
+            
+            elif list_of_filters_same_cha[0][5] == "DIMENSION" and list_of_filters_same_cha[0][11].strip().lower() == "inclure": 
                 
                 condition_dim = f" AND {cha[0]} IN ("
+                for filtre_same_cha in list_of_filters_same_cha :
+                    condition_dim = condition_dim + filtre_same_cha[10] +","
+                total_condition_col += condition_dim[0:-2] + ")"
+
+            elif list_of_filters_same_cha[0][5] == "DIMENSION" and list_of_filters_same_cha[0][11].strip().lower() == "exclure": 
+                
+                condition_dim = f" AND NOT {cha[0]} IN ("
                 for filtre_same_cha in list_of_filters_same_cha :
                     condition_dim = condition_dim + filtre_same_cha[10] +","
                 total_condition_col += condition_dim[0:-2] + ")"
@@ -131,7 +146,7 @@ def populate_ref_sql () :
             list_of_cha.append(elem)
         
         total_condition_row = ""
-        for cha in list_of_cha : 
+        for cha in list_of_cha :    
 
             query = (f"SELECT * FROM PRM_ROWS_FILTRE WHERE  idRows ='{link[5]}'  AND FILTRE_CHA = '{cha[0]}' ")
             cur.execute(query)
@@ -139,10 +154,16 @@ def populate_ref_sql () :
             for elem in cur : 
                 list_of_filters_same_cha.append(elem)
             
-            condition_dim = f" AND {cha[0]} IN ("
-            for filtre_same_cha in list_of_filters_same_cha :
-                condition_dim = condition_dim + filtre_same_cha[6] +","
-            total_condition_row += condition_dim[0:-1] + ")"
+            if list_of_filters_same_cha[0][7].strip().lower() == "inclure" : 
+                condition_dim = f" AND {cha[0]} IN ("
+                for filtre_same_cha in list_of_filters_same_cha :
+                    condition_dim = condition_dim + filtre_same_cha[6] +","
+                total_condition_row += condition_dim[0:-1] + ")"
+            else : 
+                condition_dim = f" AND NOT {cha[0]} IN ("
+                for filtre_same_cha in list_of_filters_same_cha :
+                    condition_dim = condition_dim + filtre_same_cha[6] +","
+                total_condition_row += condition_dim[0:-1] + ")"
                 
             
         
@@ -166,6 +187,7 @@ def populate_ref_sql () :
 
         edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]"),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a")
         print("inserted row with id: "+str(idLigne)+" successfuly")
+        print(SQL_CODE_FINAL)
         idLigne += 1
 
     
