@@ -26,12 +26,12 @@ def Import_All_Csv(directory,cnx,cursor) :
 
 def edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,mode) :
     if mode == "a" :
-        with open("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables\PRM_REF_SQL2.csv", 'a',newline='') as csvfile:
+        with open("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables\PRM_REF_SQL.csv", 'a',newline='') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=';',quotechar='|', quoting=csv.QUOTE_MINIMAL)     
             spamwriter.writerow([idLigne,idObjet,TDB,PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT])
     
     else : 
-         with open("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables\PRM_REF_SQL2.csv", 'w',newline='') as csvfile:
+         with open("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables\PRM_REF_SQL.csv", 'w',newline='') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=';',quotechar='|', quoting=csv.QUOTE_MINIMAL)     
             spamwriter.writerow([idLigne,idObjet,TDB,PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT])
 
