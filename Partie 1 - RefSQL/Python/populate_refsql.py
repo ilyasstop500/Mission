@@ -23,31 +23,39 @@ def populate_ref_sql () :
         print (elem)
 
 
-    query = ("SELECT * FROM PRM_RA_LIENS ")
+    query = ("SELECT  idRACible,idObjet,idRA,RA_Code,idColsCib,idRowsCib,COLS_CODE,ROWS_CODE,LIEN_VALIDE FROM PRM_RA_LIENS ")
     cur.execute(query)
     list_of_links = [] # list_of_links contain the list of (idObjet,idRA,RA_CODE,idColsCib,idRowsCib,COLS_CODE,ROW_CODE,LIEN_VALIDE)
     for elem in cur : 
         list_of_links.append(elem)
 
-    edit_csv_refsql('idLigne','idObjet','TDB','PAGE','OBJET','DAR_REF','PERD','RA_CODE','COLS_CODE','ROWS_CODE','SQL_CODE_SRC','SQL_CODE_FINAL','PERIMETRE','DATE_TRT','w')
+    #we use the edit_csv_refsql to remove all existing rows in the file then we set the first line with the columns names so that we can inserted all the date afterwards 
+    edit_csv_refsql('idLigne','idObjet','TDB','PAGE','OBJET','DAR_REF','PERD','RA_CODE','COLS_CODE','ROWS_CODE','SQL_CODE_SRC','SQL_CODE_FINAL','PERIMETRE','DATE_TRT','w') 
 
     idLigne = 0
-    for link in list_of_links : 
-        #first step : get the correct sql model
+    for link in list_of_links : # loop that iterates over all the links between columns and rows and contructs the correct sqlref query for each one 
 
-        query = (f"SELECT COLS_DATAMART FROM PRM_COLS_FILTRE WHERE idCols = '{link[4]}' LIMIT 1 ")
+
+        #-------------------------------------------------------------------- FIRST STEP : GET THE CORRECT SQL MODEL -------------------------------------------------------------------------------
+
+
+        # fetching the datamart  
+        query = (f"SELECT COLS_DATAMART FROM PRM_COLS_FILTRE WHERE idCols = '{link[4]}' LIMIT 1 ") 
         cur.execute(query)
         for elem in cur :
             datamart = elem[0]
-        #print (datamart)
+
+        
+        # fetching the sql_model that corresponds to the datamart 
         query = (f"SELECT TEXT_SQL FROM PRM_SQL_MODEL WHERE INDI_CODE_SQL = '{datamart}'")
         cur.execute(query)
         for elem in cur :
             sql_code = elem[0]
         sql_code = sql_code.replace('""','"')[1:-2] # removes the extra "" added by the mysql db 
-        #print (sql_code)
 
-        #second step : set the correct parametres 
+
+        #-------------------------------------------------------------------- SECOND STEP : FILLING THE SQL MODEL WITH PARAMETRES ------------------------------------------------------------------
+        
         SQL_CODE_SRC = sql_code
         idObjet = link[1] 
         RA = link[3] 
@@ -69,16 +77,16 @@ def populate_ref_sql () :
 
             
         
-        
 
-        
-        #cols
-        query = (f"SELECT * FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'")
+        #----------------------------------extracting cols parametres--------------------------------------------------#
+        #we start by sorting all the rows in the prm_cols_filtre so that we only get the filtres bound to our column
+        query = (f"SELECT COLS_NATURE,RA_CODE,idCols,COLS_CODE,COLS_DATAMART,COLS_FILTRE_DOMAINE,DIM_VAL_CODE,idObjet,FILTRE_TAB,FILTRE_CHA,FILTRE_VAL,FILTRE_SENS FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'")
         cur.execute(query)
         list_of_filters = []
         for elem in cur :
             list_of_filters.append(elem)
-
+        
+        #afterwards we check all the filre_cha and add them to a list
         query = (f"SELECT DISTINCT FILTRE_CHA FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'")
         cur.execute(query)
         list_of_cha = []
@@ -86,10 +94,13 @@ def populate_ref_sql () :
             list_of_cha.append(elem)
         
         total_condition_col = ""
+
+        #and then we go through this list of filtre_cha one by one writing the condition to respect of each one depending on their nature , this will help us in the case where we want to sort a
+        #field by including data from more that 1 departement using the   "WHERE departement in (val1,val2,...)" 
         for cha in list_of_cha : 
             
-
-            query = (f"SELECT * FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'  AND FILTRE_CHA = '{cha[0]}' ")
+            #for one specific cha we will extract only the cols filters that have it and then write the condition depending on the nature of the value (time,dimension,value) and the sens (include or not )
+            query = (f"SELECT COLS_NATURE,RA_CODE,idCols,COLS_CODE,COLS_DATAMART,COLS_FILTRE_DOMAINE,DIM_VAL_CODE,idObjet,FILTRE_TAB,FILTRE_CHA,FILTRE_VAL,FILTRE_SENS FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'  AND FILTRE_CHA = '{cha[0]}' ")
             cur.execute(query)
             list_of_filters_same_cha = []
             for elem in cur : 
@@ -131,9 +142,9 @@ def populate_ref_sql () :
             
             
 
-
-        #rows
-        query = (f"SELECT * FROM PRM_ROWS_FILTRE WHERE  idRows ='{link[5]}'")
+        #---------------------------------extracting rows parametres ----------------------------------------# .
+        #rows follow basically the same logic as the cols just without checking the nature of the value
+        query = (f"SELECT idObjet,idRows,ROWS_CODE,DIM_VAL_CODE,FILTRE_TAB,FILTRE_CHA,FILTRE_VAL,FILTRE_SENS FROM PRM_ROWS_FILTRE WHERE  idRows ='{link[5]}'")
         cur.execute(query)
         list_of_filters = []
         for elem in cur :
@@ -167,9 +178,9 @@ def populate_ref_sql () :
                 
             
         
-        #print("this is the final statement" + total_condition_col + total_condition_row)
 
-        sql_code=sql_code.replace("[p_DAR_REF]",code_to_date("[M0N0]"))
+        #here we create the final sqlref query by substuting the fields with the correct parametres 
+        sql_code=sql_code.replace("[p_DAR_REF]",code_to_date("[M0N0]")) # code_to_date() is a function that returns a yyyymm date using a code and the today's date
         sql_code=sql_code.replace("[p_objet]",str(idObjet))
         sql_code=sql_code.replace("[p_RA]",RA)
         sql_code=sql_code.replace("[p_ROW]",ROW)
@@ -181,11 +192,11 @@ def populate_ref_sql () :
         position = sql_code.find('GROUP BY')
 
         sql_code = sql_code[:position] + total_condition_col +total_condition_row + ' ' + sql_code[position:]
-        SQL_CODE_FINAL = sql_code
+        SQL_CODE_FINAL = sql_code # the final sqlref query
         
         
 
-        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]"),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a")
+        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]"),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a") #we use this function to write all the info into the csv file using the apppend option 'a'
         print("inserted row with id: "+str(idLigne)+" successfuly")
         print(SQL_CODE_FINAL)
         idLigne += 1
