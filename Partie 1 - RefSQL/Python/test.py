@@ -14,4 +14,3 @@ for elem in cur :
 Import_All_Csv("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables",cnx,cur) #loading all csvs into mysql
 
 populate_ref_sql() #population refsql with the correct data 
-
