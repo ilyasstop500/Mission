@@ -26,7 +26,7 @@ def populate_ref_sql (dateref) :
         print (elem)
 
 
-    query = ("SELECT  idRACible,idObjet,idRA,RA_Code,idColsCib,idRowsCib,COLS_CODE,ROWS_CODE,LIEN_VALIDE FROM PRM_RA_LIENS ")
+    query = ("SELECT DISTINCT r.idRACible,r.idObjet,r.idRA,r.RA_Code,r.idColsCib,r.idRowsCib,r.COLS_CODE,r.ROWS_CODE,r.LIEN_VALIDE FROM PRM_RA_LIENS r JOIN PRM_COLS_FILTRE c ON r.idColsCib = c.idCols WHERE c.COLS_NATURE ='SOURCE'" )
     cur.execute(query)
     list_of_links = [] # list_of_links contain the list of (idObjet,idRA,RA_CODE,idColsCib,idRowsCib,COLS_CODE,ROW_CODE,LIEN_VALIDE)
     for elem in cur : 

@@ -107,6 +107,10 @@ calculate_all (list_of_functions,tabval2)
 
 
 
+
+
+
+
     
 
 
