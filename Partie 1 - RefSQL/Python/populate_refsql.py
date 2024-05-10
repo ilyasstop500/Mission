@@ -1,16 +1,19 @@
+############################################################################################################
+# Module P1 : générateur SQL
+# Auteur : Ilyass
+# date : Avril 2024 
+############################################################################################################
+
 from ConDB import con_to_db
 from CsvImport import Csv_import 
 from CsvImport import Import_All_Csv 
 from CsvImport import edit_csv_refsql
 from timecode import code_to_date
 from datetime import datetime
+from logs import log
 
 
-
-
-
-
-def populate_ref_sql () :
+def populate_ref_sql (dateref) :
 
     #connexion a la bdd
     cnx = con_to_db("root","1234","127.0.0.1","test1")
@@ -29,12 +32,11 @@ def populate_ref_sql () :
     for elem in cur : 
         list_of_links.append(elem)
 
-    #we use the edit_csv_refsql to remove all existing rows in the file then we set the first line with the columns names so that we can inserted all the date afterwards 
+    #we use the edit_csv_refsql to remove all existing rows in the file then we set the first line with the columns names so that we can inserted all the date afterwards
     edit_csv_refsql('idLigne','idObjet','TDB','PAGE','OBJET','DAR_REF','PERD','RA_CODE','COLS_CODE','ROWS_CODE','SQL_CODE_SRC','SQL_CODE_FINAL','PERIMETRE','DATE_TRT','w') 
 
     idLigne = 0
     for link in list_of_links : # loop that iterates over all the links between columns and rows and contructs the correct sqlref query for each one 
-
 
         #-------------------------------------------------------------------- FIRST STEP : GET THE CORRECT SQL MODEL -------------------------------------------------------------------------------
 
@@ -77,7 +79,6 @@ def populate_ref_sql () :
 
             
         
-
         #----------------------------------extracting cols parametres--------------------------------------------------#
         #we start by sorting all the rows in the prm_cols_filtre so that we only get the filtres bound to our column
         query = (f"SELECT COLS_NATURE,RA_CODE,idCols,COLS_CODE,COLS_DATAMART,COLS_FILTRE_DOMAINE,DIM_VAL_CODE,idObjet,FILTRE_TAB,FILTRE_CHA,FILTRE_VAL,FILTRE_SENS FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'")
@@ -86,6 +87,7 @@ def populate_ref_sql () :
         for elem in cur :
             list_of_filters.append(elem)
         
+
         #afterwards we check all the filre_cha and add them to a list
         query = (f"SELECT DISTINCT FILTRE_CHA FROM PRM_COLS_FILTRE WHERE  idCols ='{link[4]}'")
         cur.execute(query)
@@ -111,7 +113,7 @@ def populate_ref_sql () :
                 condition_temps = f" AND {cha[0]} = "
                 for filtre_same_cha in list_of_filters_same_cha :
                     PERD = filtre_same_cha[10]
-                    condition_temps = condition_temps + code_to_date(filtre_same_cha[10]) +","
+                    condition_temps = condition_temps + code_to_date(filtre_same_cha[10],dateref) +","
                 total_condition_col += condition_temps[0:-1] + ""
 
             elif list_of_filters_same_cha[0][5] == "TEMPS" and list_of_filters_same_cha[0][11].strip().lower() == "exclure" : 
@@ -119,22 +121,22 @@ def populate_ref_sql () :
                 condition_temps = f" AND NOT {cha[0]} = "
                 for filtre_same_cha in list_of_filters_same_cha :
                     PERD = filtre_same_cha[10]
-                    condition_temps = condition_temps + code_to_date(filtre_same_cha[10]) +","
+                    condition_temps = condition_temps + code_to_date(filtre_same_cha[10],dateref) +","
                 total_condition_col += condition_temps[0:-1] + ""
             
             elif list_of_filters_same_cha[0][5] == "DIMENSION" and list_of_filters_same_cha[0][11].strip().lower() == "inclure": 
                 
                 condition_dim = f" AND {cha[0]} IN ("
                 for filtre_same_cha in list_of_filters_same_cha :
-                    condition_dim = condition_dim + filtre_same_cha[10] +","
-                total_condition_col += condition_dim[0:-2] + ")"
+                    condition_dim = condition_dim +"'"+filtre_same_cha[10] +"'"+","
+                total_condition_col += condition_dim[0:-1] + ")"
 
             elif list_of_filters_same_cha[0][5] == "DIMENSION" and list_of_filters_same_cha[0][11].strip().lower() == "exclure": 
                 
                 condition_dim = f" AND NOT {cha[0]} IN ("
                 for filtre_same_cha in list_of_filters_same_cha :
-                    condition_dim = condition_dim + filtre_same_cha[10] +","
-                total_condition_col += condition_dim[0:-2] + ")"
+                    condition_dim = condition_dim +"'"+filtre_same_cha[10] +"'"+","
+                total_condition_col += condition_dim[0:-1] + ")"
             
             elif list_of_filters_same_cha[0][5] == "MESURE":
                 INDI = cha[0]
@@ -168,19 +170,19 @@ def populate_ref_sql () :
             if list_of_filters_same_cha[0][7].strip().lower() == "inclure" : 
                 condition_dim = f" AND {cha[0]} IN ("
                 for filtre_same_cha in list_of_filters_same_cha :
-                    condition_dim = condition_dim + filtre_same_cha[6] +","
+                    condition_dim = condition_dim +"'"+ filtre_same_cha[6] +"'"+","
                 total_condition_row += condition_dim[0:-1] + ")"
             else : 
                 condition_dim = f" AND NOT {cha[0]} IN ("
                 for filtre_same_cha in list_of_filters_same_cha :
-                    condition_dim = condition_dim + filtre_same_cha[6] +","
+                    condition_dim = condition_dim +"'"+ filtre_same_cha[6] +"'"+","
                 total_condition_row += condition_dim[0:-1] + ")"
                 
             
         
 
         #here we create the final sqlref query by substuting the fields with the correct parametres 
-        sql_code=sql_code.replace("[p_DAR_REF]",code_to_date("[M0N0]")) # code_to_date() is a function that returns a yyyymm date using a code and the today's date
+        sql_code=sql_code.replace("[p_DAR_REF]",code_to_date("[M0N0]",dateref)) # code_to_date() is a function that returns a yyyymm date using a code and the today's date
         sql_code=sql_code.replace("[p_objet]",str(idObjet))
         sql_code=sql_code.replace("[p_RA]",RA)
         sql_code=sql_code.replace("[p_ROW]",ROW)
@@ -196,9 +198,11 @@ def populate_ref_sql () :
         
         
 
-        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]"),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a") #we use this function to write all the info into the csv file using the apppend option 'a'
-        print("inserted row with id: "+str(idLigne)+" successfuly")
+        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]",dateref),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a") #we use this function to write all the info into the csv file using the apppend option 'a'
         print(SQL_CODE_FINAL)
+        log("inserted row with id: " + str(idLigne)+"successfuly",r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv")
+        Import_All_Csv("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables",cnx,cur)
+        log ("uploaded all modifications into the db using import_all_csv function ",r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv")
         idLigne += 1
 
     
