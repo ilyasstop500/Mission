@@ -12,6 +12,6 @@ def log(text,filepath) :
 
 
 
-log('test',r"C:\Users\ILYASS\Desktop\logs.csv") 
+
 
 

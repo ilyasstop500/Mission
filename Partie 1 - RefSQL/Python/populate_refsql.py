@@ -13,7 +13,7 @@ from datetime import datetime
 from logs import log
 
 
-def populate_ref_sql (dateref) :
+def populate_ref_sql (dateref,csvdirect,logsdirect) :
 
     #connexion a la bdd
     cnx = con_to_db("root","1234","127.0.0.1","test1")
@@ -33,7 +33,7 @@ def populate_ref_sql (dateref) :
         list_of_links.append(elem)
 
     #we use the edit_csv_refsql to remove all existing rows in the file then we set the first line with the columns names so that we can inserted all the date afterwards
-    edit_csv_refsql('idLigne','idObjet','TDB','PAGE','OBJET','DAR_REF','PERD','RA_CODE','COLS_CODE','ROWS_CODE','SQL_CODE_SRC','SQL_CODE_FINAL','PERIMETRE','DATE_TRT','w') 
+    edit_csv_refsql('idLigne','idObjet','TDB','PAGE','OBJET','DAR_REF','PERD','RA_CODE','COLS_CODE','ROWS_CODE','SQL_CODE_SRC','SQL_CODE_FINAL','PERIMETRE','DATE_TRT','w',logsdirect) 
 
     idLigne = 0
     for link in list_of_links : # loop that iterates over all the links between columns and rows and contructs the correct sqlref query for each one 
@@ -198,11 +198,11 @@ def populate_ref_sql (dateref) :
         
         
 
-        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]",dateref),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a") #we use this function to write all the info into the csv file using the apppend option 'a'
+        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]",dateref),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a",logsdirect) #we use this function to write all the info into the csv file using the apppend option 'a'
         print(SQL_CODE_FINAL)
-        log("inserted row with id: " + str(idLigne)+"successfuly",r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv")
-        Import_All_Csv("C:\ProgramData\MySQL\MySQL Server 8.0\Data\CsvTables",cnx,cur)
-        log ("uploaded all modifications into the db using import_all_csv function ",r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv")
+        log("inserted row with id: " + str(idLigne)+" successfuly",logsdirect)
+        Import_All_Csv(csvdirect,cnx,cur,logsdirect)
+        log ("uploaded all modifications into the db using import_all_csv function ",logsdirect)
         idLigne += 1
 
     

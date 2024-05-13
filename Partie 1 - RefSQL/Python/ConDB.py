@@ -16,6 +16,6 @@ def con_to_db(username,pwd,hostip,dbname) :
     else:
       print(err)
   else:
-    print("all good")
+    print("connection working ")
     return cnx 
     
