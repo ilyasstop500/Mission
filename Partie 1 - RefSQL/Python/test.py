@@ -14,7 +14,7 @@ logs_directory = r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv"  #always add r 
 
 
 
-dar_ref= "202111"  # est egale à M0N0 doit etre un int 
+dar_ref= "202405"  # est egale à M0N0 doit etre un int 
 
 cnx = con_to_db("root","1234","127.0.0.1","test1") #con to db 
 cur = cnx.cursor()
