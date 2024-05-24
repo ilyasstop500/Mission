@@ -1,8 +1,7 @@
 from ConDB import con_to_db
-from CsvImport import Csv_import
 from CsvImport import Import_All_Csv
-from CsvImport import edit_csv_refsql
-from populate_refsql import populate_ref_sql
+from populate_refsql import remplir_ref_sql
+from execsql import remplir_cube_final_source
 
 
 
@@ -24,6 +23,8 @@ cur.execute(query)
 for elem in cur :
     print (elem)
 Import_All_Csv(CSVs_directory,cnx,cur,logs_directory)
-populate_ref_sql(dar_ref,CSVs_directory,logs_directory) #population refsql with the correct data 
+remplir_ref_sql(dar_ref,CSVs_directory,logs_directory) #population refsql with the correct data 
+remplir_cube_final_source()
+
 
 
