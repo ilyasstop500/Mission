@@ -13,7 +13,7 @@ from datetime import datetime
 from logs_refsql import log_refsql as log
 
 
-def remplir_ref_sql (dateref,csvdirect,logsdirect) :
+def remplir_ref_sql (dateref,logsdirect) :
 
     dict = {
         "FILE" : "LOG OF THE REFSQL PROCESS CONTAINING ALL THE LINES OF SQL THAT HAVE BEEN PROCESSED "

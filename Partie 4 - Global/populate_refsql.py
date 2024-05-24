@@ -13,7 +13,7 @@ from datetime import datetime
 from logs_refsql import log_refsql as log
 
 
-def remplir_ref_sql (dateref,csvdirect,logsdirect) :
+def remplir_ref_sql (dateref,logsdirect,user,pwd,ip,schema) :
 
     dict = {
         "FILE" : "LOG OF THE REFSQL PROCESS CONTAINING ALL THE LINES OF SQL THAT HAVE BEEN PROCESSED "
@@ -21,7 +21,7 @@ def remplir_ref_sql (dateref,csvdirect,logsdirect) :
     log(dict,logsdirect,'w')
 
     #connexion a la bdd
-    cnx = con_to_db("root","1234","127.0.0.1","test5")
+    cnx = con_to_db(user,pwd,ip,schema)
     cur = cnx.cursor()
 
     #test affichage des tables
@@ -214,7 +214,7 @@ def remplir_ref_sql (dateref,csvdirect,logsdirect) :
 
         #upload to database ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         TEMPS = code_to_date("[M0N0]",dateref)
-        query =("INSERT INTO prm_ref_sql ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s)")
+        query =("REPLACE INTO prm_ref_sql ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s)")
         values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT)
 
         # Execute the query with the values

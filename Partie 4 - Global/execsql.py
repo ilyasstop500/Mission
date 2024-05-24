@@ -1,8 +1,8 @@
 from ConDB import con_to_db
 
-def remplir_cube_final_source():
+def remplir_cube_final_source(user,pwd,ip,schema):
     
-    cnx = con_to_db("root","1234","127.0.0.1","test5") #con to db 
+    cnx = con_to_db(user,pwd,ip,schema) #con to db 
 
     cur = cnx.cursor()
     query = ("SHOW TABLES")
@@ -33,8 +33,8 @@ def remplir_cube_final_source():
         cur.execute(SQL_CODE_FINAL)
         VALEUR = cur.fetchall()[0][-1]
         print(VALEUR)
-        query =("INSERT IGNORE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s)")
-        values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,VALEUR)
+        query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s)")
+        values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,VALEUR,"PAS DE FORMULE - CALCUL SOURCE")
         
 
         # Execute the query with the values
