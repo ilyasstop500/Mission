@@ -27,8 +27,7 @@ def  code_to_date(code,dateref) :
     return str(final_date)
             
 
-
-#print(code_to_date('[M-1]'))
+print(code_to_date('[M-7]',"202405"))
 
 
 

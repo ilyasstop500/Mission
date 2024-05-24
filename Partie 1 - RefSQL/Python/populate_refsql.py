@@ -10,10 +10,15 @@ from CsvImport import Import_All_Csv
 from CsvImport import edit_csv_refsql
 from timecode import code_to_date
 from datetime import datetime
-from logs import log
+from logs_refsql import log_refsql as log
 
 
 def populate_ref_sql (dateref,csvdirect,logsdirect) :
+
+    dict = {
+        "FILE" : "LOG OF THE REFSQL PROCESS CONTAINING ALL THE LINES OF SQL THAT HAVE BEEN PROCESSED "
+    }
+    log(dict,logsdirect,'w')
 
     #connexion a la bdd
     cnx = con_to_db("root","1234","127.0.0.1","test1")
@@ -26,11 +31,12 @@ def populate_ref_sql (dateref,csvdirect,logsdirect) :
         print (elem)
 
 
-    query = ("SELECT DISTINCT r.idRACible,r.idObjet,r.idRA,r.RA_Code,r.idColsCib,r.idRowsCib,r.COLS_CODE,r.ROWS_CODE,r.LIEN_VALIDE FROM PRM_RA_LIENS r JOIN PRM_COLS_FILTRE c ON r.idColsCib = c.idCols WHERE c.COLS_NATURE ='SOURCE'" )
+    query = ("SELECT DISTINCT r.idRACible,r.idObjet,r.idRA,r.RA_Code,r.idColsCib,r.idRowsCib,r.COLS_CODE,r.ROWS_CODE,r.LIEN_VALIDE,c.COLS_NATURE FROM PRM_RA_LIENS r JOIN PRM_COLS_FILTRE c ON r.idColsCib = c.idCols WHERE r.LIEN_VALIDE ='OUI\r' AND c.COLS_NATURE = 'SOURCE'" )
     cur.execute(query)
     list_of_links = [] # list_of_links contain the list of (idObjet,idRA,RA_CODE,idColsCib,idRowsCib,COLS_CODE,ROW_CODE,LIEN_VALIDE)
     for elem in cur : 
         list_of_links.append(elem)
+        print("link : " , elem)
 
     #we use the edit_csv_refsql to remove all existing rows in the file then we set the first line with the columns names so that we can inserted all the date afterwards
     edit_csv_refsql('idLigne','idObjet','TDB','PAGE','OBJET','DAR_REF','PERD','RA_CODE','COLS_CODE','ROWS_CODE','SQL_CODE_SRC','SQL_CODE_FINAL','PERIMETRE','DATE_TRT','w',logsdirect) 
@@ -53,12 +59,13 @@ def populate_ref_sql (dateref,csvdirect,logsdirect) :
         cur.execute(query)
         for elem in cur :
             sql_code = elem[0]
-        sql_code = sql_code.replace('""','"')[1:-2] # removes the extra "" added by the mysql db 
+        sql_code = sql_code.replace('""','"')[0:-1] # removes the extra "" added by the mysql db 
 
 
         #-------------------------------------------------------------------- SECOND STEP : FILLING THE SQL MODEL WITH PARAMETRES ------------------------------------------------------------------
         
         SQL_CODE_SRC = sql_code
+        idLigne = link[0]
         idObjet = link[1] 
         RA = link[3] 
         COL = link[6]
@@ -73,7 +80,7 @@ def populate_ref_sql (dateref,csvdirect,logsdirect) :
         for elem in cur :
             prop_list.append(elem)
         
-        TDB = prop_list[0][0]
+        TBD = prop_list[0][0]
         PAGE = prop_list[0][1]
         OBJET = prop_list[0][2]
 
@@ -197,14 +204,45 @@ def populate_ref_sql (dateref,csvdirect,logsdirect) :
         SQL_CODE_FINAL = sql_code # the final sqlref query
         
         
+        
 
-        edit_csv_refsql(idLigne,idObjet,TDB,PAGE,OBJET,code_to_date("[M0N0]",dateref),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a",logsdirect) #we use this function to write all the info into the csv file using the apppend option 'a'
-        print(SQL_CODE_FINAL)
-        log("inserted row with id: " + str(idLigne)+" successfuly",logsdirect)
-        Import_All_Csv(csvdirect,cnx,cur,logsdirect)
-        log ("uploaded all modifications into the db using import_all_csv function ",logsdirect)
-        idLigne += 1
+        edit_csv_refsql(idLigne,idObjet,TBD,PAGE,OBJET,code_to_date("[M0N0]",dateref),PERD,RA,COL,ROW,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,"a",logsdirect) #we use this function to write all the info into the csv file using the apppend option 'a'
+        #print(SQL_CODE_FINAL)
 
+
+
+
+        #upload to database ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        TEMPS = code_to_date("[M0N0]",dateref)
+        query =("INSERT INTO prm_ref_sql ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s)")
+        values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT)
+
+        # Execute the query with the values
+        cur.execute(query, values)
+
+        # Commit the transaction
+        cnx.commit()
+        #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
+        #writing result in log --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        dict = {
+            "idLigne" : idLigne , 
+            "idObjet" : idObjet ,
+            "TBD" : TBD,
+            "PAGE" : PAGE ,
+            "OBJET" : OBJET ,
+            "DAT_REF" : str(TEMPS) ,
+            "PERD" : PERD ,
+            "RA_CODE" : RA ,
+            "COLS_CODE" : COL , 
+            "ROWS_CODE" : ROW,
+            "SQL_CODE_SRC" : SQL_CODE_SRC ,
+            "SQL_CODE_FINAL" : SQL_CODE_FINAL , 
+            "PERIMETRE" : PERIMETRE ,
+            "DATE_TRT" : str(DATE_TRT)  
+        }
+        log(dict,logsdirect,'a')
+    
     
 
 
