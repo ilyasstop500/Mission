@@ -13,7 +13,7 @@ logs_directory = r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv"  #always add r 
 username = 'root'
 password =  '1234'
 ip_address =  '127.0.0.1'
-schema_name = 'bdtest'
+schema_name = 'jsp'
 dateref = "202405"
 
 

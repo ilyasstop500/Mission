@@ -58,6 +58,15 @@ def script_tables (user,pwd,ip,schema) :
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
   """)
 
+  queryrow = ("""
+  CREATE TABLE IF NOT EXISTS `prm_rows` (
+    `idRows` int DEFAULT NULL,
+    `idObjet` int DEFAULT NULL,
+    `ROWS_CODE` varchar(200) DEFAULT NULL,
+    `ROWS_NIV` varchar(200) DEFAULT 0
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  """)
+
   query4 = ("""
   CREATE TABLE IF NOT EXISTS `prm_ref_result` (
     `idLigne` int DEFAULT NULL,
@@ -77,6 +86,8 @@ def script_tables (user,pwd,ip,schema) :
     `VALEUR` varchar(200) DEFAULT NULL,
     `FORMULE` varchar(200) DEFAULT NULL,
     `MSG` varchar(200) DEFAULT 'GOOD',
+    `NIV` varchar(200) DEFAULT 0 ,
+    
     
     CONSTRAINT UC_RESULT UNIQUE (`idLigne`)
     
@@ -98,7 +109,8 @@ def script_tables (user,pwd,ip,schema) :
     `SQL_CODE_FINAL` varchar(1000) DEFAULT NULL,
     `PERIMETRE` varchar(10) DEFAULT NULL,
     `DATE_TRT` varchar(200) DEFAULT NULL,
-    CONSTRAINT UC_LIEN UNIQUE (`idLigne`) 
+    `NIV` varchar(200) DEFAULT 0 ,
+    CONSTRAINT UC_LIEN UNIQUE (`idLigne`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
   """)
 
@@ -287,6 +299,7 @@ def script_tables (user,pwd,ip,schema) :
   cur.execute(query11)
   cur.execute(query12)
   cur.execute(query13)
+  cur.execute(queryrow)
 
   # Commit the changes
   cnx.commit()

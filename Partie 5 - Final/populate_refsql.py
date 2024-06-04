@@ -74,6 +74,10 @@ def remplir_ref_sql (dateref,logsdirect,user,pwd,ip,schema) :
         PERIMETRE = "SOURCE"
         DATE_TRT = now = datetime.now()
 
+        query = (f" SELECT ROWS_NIV FROM PRM_ROWS WHERE ROWS_CODE = '{ROW}'AND idObjet = '{idObjet}'")
+        cur.execute(query)
+        NIV = cur.fetchone()[0]
+
         query = (f" SELECT TDB,PAGE,OBJET FROM PRM_TDB_OBJETS WHERE idObjet = {idObjet}")
         cur.execute(query)
         prop_list = []
@@ -214,8 +218,8 @@ def remplir_ref_sql (dateref,logsdirect,user,pwd,ip,schema) :
 
         #upload to database ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         TEMPS = code_to_date("[M0N0]",dateref)
-        query =("REPLACE INTO prm_ref_sql ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s)")
-        values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT)
+        query =("REPLACE INTO prm_ref_sql ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s,%s)")
+        values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,NIV)
 
         # Execute the query with the values
         cur.execute(query, values)

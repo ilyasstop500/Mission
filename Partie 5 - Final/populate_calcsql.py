@@ -71,27 +71,28 @@ def remplir_cube_final_calcul(user,pwd,ip,schema):
             #print('FORMULE :    ' , FORMULE)
             #print('RESULTAT ', calculate(FORMULE,list_valeurs))
 
-        if TYPE == "LIGNE" and FAMILLE == "MAX"  :
+        elif TYPE == "LIGNE" and FAMILLE == "MAX"  :
             query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
             cur.execute(query)
             composant = cur.fetchone()
-            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}'")
+            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
             cur.execute(query)
             list_valeurs  = cur.fetchall()
             print(list_valeurs)
             print(max(list_valeurs))
 
-        if TYPE == "LIGNE" and FAMILLE == "MIN"  :
+        elif TYPE == "LIGNE" and FAMILLE == "MIN"  :
             query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
             cur.execute(query)
             composant = cur.fetchone()
-            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}'")
+            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}' AND NIV = 0 ")
             cur.execute(query)
             list_valeurs  = cur.fetchall()
             print(list_valeurs)
             print(min(list_valeurs))
         
-        if TYPE == "LIGNE" and FAMILLE == "POIDS"  :
+        elif TYPE == "LIGNE" and FAMILLE == "RANG"  :
+            print("heyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy")
             query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
             cur.execute(query)
             composant = cur.fetchone()
@@ -102,16 +103,32 @@ def remplir_cube_final_calcul(user,pwd,ip,schema):
             print(min(list_valeurs))
 
 
-        if TYPE == "LIGNE" and FAMILLE == "RANG"  :
+        elif TYPE == "LIGNE" and FAMILLE == "POIDS"  :
+
+            query =(f"SELECT  NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' ")
+            cur.execute(query)
+            test = cur.fetchone()[0]
+            print('test' , test)
+            if int(test) == 1 :
+                poids = 1
+                break
+
             query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
             cur.execute(query)
             composant = cur.fetchone()
-            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}'")
+            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' AND NIV = 0 ")
             cur.execute(query)
-            list_valeurs  = cur.fetchall()
-            print(list_valeurs)
-            print(min(list_valeurs))
-
+            numerateur  =cur.fetchone()[0]
+            print("niv 0 " , numerateur)
+            query = (f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND  COLS_CODE = '{composant[2].strip()}' AND NIV = 1 ")
+            cur.execute(query)
+            denumerateur =cur.fetchone()[0]
+            print("niv 1 " , denumerateur)
+            poids = float(numerateur)/float(denumerateur)
+            print("le poids est " ,poids)
+            
+            
+            
             
             
             
