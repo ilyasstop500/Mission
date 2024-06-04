@@ -244,7 +244,7 @@ def script_tables (user,pwd,ip,schema) :
   query11 = ("""
   CREATE TABLE IF NOT EXISTS `prm_cols` (
     `idCol` int DEFAULT NULL,
-    `COLS_CODE` varchar(10) DEFAULT NULL,
+    `COLS_CODE` varchar(200) DEFAULT NULL,
     `COLS_NATURE` varchar(200) DEFAULT NULL,
     `COLS_FORMULE` varchar(200) DEFAULT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -252,8 +252,8 @@ def script_tables (user,pwd,ip,schema) :
 
   query12 = ("""
   CREATE TABLE IF NOT EXISTS `prm_cols_calcul` (
-    `idRefCalc` int DEFAULT NULL,
-    `CALC_FORMULE` varchar(10) DEFAULT NULL,
+    `CALC_CODE` varchar(200) DEFAULT NULL,
+    `CALC_FORMULE` varchar(200) DEFAULT NULL,
     `CALC_FAMILLE` varchar(200) DEFAULT NULL,
     `CALC_TYPE` varchar(200) DEFAULT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -262,15 +262,16 @@ def script_tables (user,pwd,ip,schema) :
   query13 = ("""
   CREATE TABLE IF NOT EXISTS `prm_cols_composant` (
     `idRaComp` int DEFAULT NULL,
-    `idObjet` varchar(10) DEFAULT NULL,
+    `idObjet` varchar(200) DEFAULT NULL,
     `idRA` varchar(200) DEFAULT NULL,
     `idColscib` varchar(200) DEFAULT NULL,
     `COLS_CODE` varchar(200) DEFAULT NULL,
-    `CODE_COMPOSANT` int DEFAULT NULL,
-    `idColsSrc` varchar(10) DEFAULT NULL,
-    `COLS_CODE_SRC` varchar(10) DEFAULT NULL
+    `CODE_COMPOSANT` varchar(200) DEFAULT NULL,
+    `idColsSrc` varchar(200) DEFAULT NULL,
+    `COLS_CODE_SRC` varchar(200) DEFAULT NULL
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
   """)
+  
 
   # Execute the queries
   cur.execute(query1)

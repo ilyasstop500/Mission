@@ -3,6 +3,7 @@ from ConDB import  con_to_db
 from CsvImport import Import_All_Csv
 from populate_refsql import remplir_ref_sql
 from execsql import remplir_cube_final_source
+from populate_calcsql import remplir_cube_final_calcul
 
 
 
@@ -12,7 +13,7 @@ logs_directory = r"C:\Users\ILYASS\Desktop\LOGS\logs_refsql.csv"  #always add r 
 username = 'root'
 password =  '1234'
 ip_address =  '127.0.0.1'
-schema_name = 'lyouma'
+schema_name = 'bdtest'
 dateref = "202405"
 
 
@@ -26,6 +27,7 @@ cnx = con_to_db(username,password,ip_address,schema_name)
 cur = cnx.cursor()
 Import_All_Csv(CSVs_directory,cnx,cur,logs_directory)
 
+
 # STEP 3 / IMPORTING THE DATA FROM THE DB AND CREATING THE REFSQL QUERIES 
 
 remplir_ref_sql(dateref,logs_directory,username,password,ip_address,schema_name)
@@ -33,6 +35,11 @@ remplir_ref_sql(dateref,logs_directory,username,password,ip_address,schema_name)
 # STEP 4 / EXECUTING THE REFSQL QUERIES AND UPLOADING THE RESULT TO FINAL CUBE WITH ONLY SOURCE ROWS
 
 remplir_cube_final_source(username,password,ip_address,schema_name)
+remplir_cube_final_calcul(username,password,ip_address,schema_name)
+
+
+
+
 
 
 
