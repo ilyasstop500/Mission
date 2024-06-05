@@ -57,5 +57,3 @@ remplir_cube_final_calcul(username,password,ip_address,schema_name)
 
 
 
-
-
