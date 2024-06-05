@@ -172,17 +172,13 @@ def remplir_cube_final_calcul(user,pwd,ip,schema):
 
         elif TYPE == "LIGNE" and FAMILLE == "RANG":
 
-            query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}'")
-            cur.execute(query)
-            test = cur.fetchone()[0]
-            if int(test) == 1:
-                rang = "pas de rang"
-                break
-
+            
+            # Query to get composant details
             query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
             cur.execute(query)
             composant = cur.fetchone()
 
+            # Query to get list of lines
             query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
             cur.execute(query)
             list_lignes = list(cur.fetchall())
@@ -197,18 +193,28 @@ def remplir_cube_final_calcul(user,pwd,ip,schema):
                 temp_list = list(list_lignes[i])  # Convert tuple to list
                 temp_list[3] = i + 1  # Modify the 4th element
                 list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
-
+            list_lignes.reverse()
             print(list_lignes)
 
-            query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-            values = (idLigne, idObjet, TBD, PAGE,OBJET,"202405",PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FORMULE+FAMILLE,1)
-        
+            for i in range(len(list_lignes)):
+                
+                if list_lignes[i][2] == ROW :    
+                    testo = list_lignes[i][3]  # Ensure RESULTAT is correctly set for each line
+
+            query = ("REPLACE INTO prm_ref_result "
+                    "(idLigne, idObjet, TBD, PAGE, OBJET, DAR_REF, PERD, RA_CODE, COLS_CODE, ROWS_CODE, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT, VALEUR, FORMULE, NIV) "
+                    "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s , %s, %s)")
+            values = (idLigne, idobjet, TBD, PAGE, OBJET, "202405", PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT, testo, FORMULE+FAMILLE, 1)
 
             # Execute the query with the values
-            cur.execute(query,values)
+            cur.execute(query, values)
             # Commit the transaction
             cnx.commit()
 
+
+
+                    
+                
         
         
 
