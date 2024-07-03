@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
   `FILTRE_VAL` varchar(60) NOT NULL,
   `FILTRE_SENS` varchar(10) NOT NULL,
   PRIMARY KEY (`idCols`, `FILTRE_CHA`,`FILTRE_VAL`),
-  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
+  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE 
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

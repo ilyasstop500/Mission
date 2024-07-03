@@ -29,11 +29,12 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
         for elem in cur :
             print (elem)
 
-
+        # getting all line for the refsql table
         list_of_refsql = list()
         query = "SELECT * FROM prm_ref_sql"
         cur.execute(query)
         list_of_refsql = cur.fetchall()
+
         for refsql in list_of_refsql : 
             idLigne = refsql[0]
             idObjet = refsql[1]
@@ -59,6 +60,9 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
                 else:
                     VALEUR = None  # Or any default value you want to use
 
+                
+            # exception in the case of an error that will send the "ERROR" msg 
+
             except Exception as e : 
                 logging.error(f"Can not execute refsql SQL CODE and get Calculate Value for line with id '{idLigne}'"+str(e))
                 query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,FORMULE,NIV,MSG)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
@@ -72,7 +76,7 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
             cur.execute(query,values)
             # Commit the transaction
             cnx.commit()
-
+            # dict containing all value inserted into the db 
             mydict = {
                     "idLigne" : idLigne , 
                     "idObjet" : idObjet ,
@@ -92,7 +96,8 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
                     "MSG" : "PAS DE FORMULE - CALCUL SOURCE",
                     "NIV" : NIV
                 }
-
+            
+            # saving the dict in the log file
             logging.debug(f"uploaded into database line '{idLigne}' with value '{VALEUR}' '{json.dumps(mydict, indent=4)}'")
 
     except Exception as e:

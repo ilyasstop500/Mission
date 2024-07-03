@@ -14,6 +14,7 @@ logging.basicConfig(
 )
 
 
+# Definition of Csv_import a function that uploads the content of one csv file to the it's corresponding table that has the exact same name 
 
 def Csv_import(filename, tablename, cnx, cursor):
     try:
@@ -32,7 +33,7 @@ def Csv_import(filename, tablename, cnx, cursor):
 
 
 
-
+# Definition of Csv_import_all a function that uploads the contents of all the csvs in a directory to the corresponding tables 
 def Import_All_Csv(directory):
     logging.debug(f"Initiating Csv upload from '{directory}'")
     cnx = con_to_db(Parametres.username, Parametres.password, Parametres.ip_address, Parametres.schema_name)
@@ -59,8 +60,6 @@ def Import_All_Csv(directory):
         # Add more tables in the desired order if needed
     ]
     
-    # Import prm_tdb_objets.csv first
-    # Import other tables in specified order
     for tablename in table_order:
         for table in list_of_tables:
             if table[0] == tablename:
