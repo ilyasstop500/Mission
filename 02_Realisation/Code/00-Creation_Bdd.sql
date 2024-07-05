@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  gg;
+CREATE DATABASE IF NOT EXISTS  cr7;
 
-USE gg;
+USE cr7;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
@@ -36,7 +36,8 @@ CREATE TABLE IF NOT EXISTS `prm_cols` (
   `idCol` int PRIMARY KEY,
   `COLS_CODE` varchar(200) DEFAULT NULL,
   `COLS_NATURE` varchar(200) DEFAULT NULL,
-  `COLS_FORMULE` varchar(200) 
+  `COLS_FORMULE` varchar(200) ,
+  `COLS_ORDRE` int
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
@@ -53,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
   `FILTRE_VAL` varchar(60) NOT NULL,
   `FILTRE_SENS` varchar(10) NOT NULL,
   PRIMARY KEY (`idCols`, `FILTRE_CHA`,`FILTRE_VAL`),
-  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE 
+  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

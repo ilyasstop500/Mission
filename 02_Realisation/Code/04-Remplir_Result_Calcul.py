@@ -97,30 +97,32 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
         TYPE = placeholder[0][2].strip()
 
         if TYPE == "COLONNE"  : 
-            list_composants = list()
-            query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
-            cur.execute(query)
-            list_composants = cur.fetchall()
-            #print(list_composants)
-            #print('next')
-            placeholder = list()
-            for composant in list_composants : 
-                idobjet = composant[0]
-                CODE_COMPOSANT = composant[1].strip()
-                COLCODE= composant[2].strip()
-                placeholder.append([idobjet,CODE_COMPOSANT,COLCODE,ROWCODE])
-            
-            list_valeurs = list()
-            for elem in placeholder : 
-                query =(f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{elem[0]}' AND  COLS_CODE = '{elem[2]}' AND ROWS_CODE = '{elem[3]}'")
+            try  :
+                list_composants = list()
+                query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                 cur.execute(query)
-                value = cur.fetchone()[0]
-                list_valeurs.append([elem[1],value])
-            
-            try  : 
-                RESULTAT = calculate(FORMULE,list_valeurs)
+                list_composants = cur.fetchall()
+                #print(list_composants)
+                #print('next')
+                placeholder = list()
+                for composant in list_composants : 
+                    idobjet = composant[0]
+                    CODE_COMPOSANT = composant[1].strip()
+                    COLCODE= composant[2].strip()
+                    placeholder.append([idobjet,CODE_COMPOSANT,COLCODE,ROWCODE])
+                
+                list_valeurs = list()
+                for elem in placeholder : 
+                    query =(f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{elem[0]}' AND  COLS_CODE = '{elem[2]}' AND ROWS_CODE = '{elem[3]}'")
+                    cur.execute(query)
+                    value = cur.fetchone()[0]
+                    list_valeurs.append([elem[1],value])
+                
+                
+                    RESULTAT = calculate(FORMULE,list_valeurs)
             except Exception as e :  
                 logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
+                continue
 
             
     
@@ -136,26 +138,35 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
             
 
         elif TYPE == "LIGNE" and FAMILLE == "MAX":
-            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
-            cur.execute(query)
-            composant = cur.fetchall()[0]
 
-            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
-            cur.execute(query)
-            placeholder = list(cur.fetchall())
-            list_lignes = list(placeholder)
+            try : 
 
-            print(list_lignes)
+                query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                cur.execute(query)
+                composant = cur.fetchall()[0]
 
-            list_valeurs = [ligne[3] for ligne in list_lignes]
+                query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
+                cur.execute(query)
+                placeholder = list(cur.fetchall())
+                list_lignes = list(placeholder)
 
-            for i in range(len(list_lignes)):
-                temp_list = list(list_lignes[i])  # Convert tuple to list
-                temp_list[3] = str(max(list_valeurs))  # Modify the element
-                list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
+                print(list_lignes)
 
-            print(list_lignes)
-            RESULTAT = temp_list[3]  
+                list_valeurs = [ligne[3] for ligne in list_lignes]
+
+                for i in range(len(list_lignes)):
+                    temp_list = list(list_lignes[i])  # Convert tuple to list
+                    temp_list[3] = str(max(list_valeurs))  # Modify the element
+                    list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
+
+                print(list_lignes)
+                RESULTAT = temp_list[3]  
+
+            except Exception as e :  
+                logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
+                continue
+
+        
             query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
             values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FAMILLE,1)
         
@@ -166,26 +177,33 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
             cnx.commit()
 
         elif TYPE == "LIGNE" and FAMILLE == "MIN":
-            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
-            cur.execute(query)
-            composant = cur.fetchall()[0]
 
-            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
-            cur.execute(query)
-            placeholder = list(cur.fetchall())
-            list_lignes = list(placeholder)
+            try : 
+                query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                cur.execute(query)
+                composant = cur.fetchall()[0]
 
-            print(list_lignes)
+                query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
+                cur.execute(query)
+                placeholder = list(cur.fetchall())
+                list_lignes = list(placeholder)
 
-            list_valeurs = [ligne[3] for ligne in list_lignes]
+                print(list_lignes)
 
-            for i in range(len(list_lignes)):
-                temp_list = list(list_lignes[i])  # Convert tuple to list
-                temp_list[3] = str(min(list_valeurs))  # Modify the element
-                list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
+                list_valeurs = [ligne[3] for ligne in list_lignes]
 
-            print(list_lignes)
-            RESULTAT = temp_list[3]
+                for i in range(len(list_lignes)):
+                    temp_list = list(list_lignes[i])  # Convert tuple to list
+                    temp_list[3] = str(min(list_valeurs))  # Modify the element
+                    list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
+
+                print(list_lignes)
+                RESULTAT = temp_list[3]
+
+            except Exception as e :  
+                logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
+                continue
+
             query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
             values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FAMILLE,1)
         
@@ -200,48 +218,53 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
         elif TYPE == "LIGNE" and FAMILLE == "RANG":
 
-            
-            # Fetch NIV for the given ROWCODE
-            query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}'")
-            cur.execute(query)
-            test = cur.fetchone()
-            
-            if test:
-                test = test[0]
-                print('test', test)
-            else:
-                raise ValueError("No result found for the given idObjet, COLS_CODE, and ROWS_CODE")
+            try : 
 
-            if int(test) == 1:
-                poids = 1
-                continue
-
-            # Query to get composant details
-            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
-            cur.execute(query)
-            composant = cur.fetchall()[0]
-
-            # Query to get list of lines
-            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
-            cur.execute(query)
-            list_lignes = list(cur.fetchall())
-
-            print(list_lignes)
-
-            # Sort list_lignes based on the 4th element (VALEUR)
-            list_lignes.sort(key=itemgetter(3))
-
-            # Convert tuples to lists, modify, and convert back to tuples
-            for i in range(len(list_lignes)):
-                temp_list = list(list_lignes[i])  # Convert tuple to list
-                temp_list[3] = i + 1  # Modify the 4th element
-                list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
-            print(list_lignes)
-
-            for i in range(len(list_lignes)):
+                # Fetch NIV for the given ROWCODE
+                query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}'")
+                cur.execute(query)
+                test = cur.fetchone()
                 
-                if list_lignes[i][2] == ROW :    
-                    testo = list_lignes[i][3]  # Ensure RESULTAT is correctly set for each line
+                if test:
+                    test = test[0]
+                    print('test', test)
+                else:
+                    raise ValueError("No result found for the given idObjet, COLS_CODE, and ROWS_CODE")
+
+                if int(test) == 1:
+                    poids = 1
+                    continue
+
+                # Query to get composant details
+                query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                cur.execute(query)
+                composant = cur.fetchall()[0]
+
+                # Query to get list of lines
+                query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0")
+                cur.execute(query)
+                list_lignes = list(cur.fetchall())
+
+                print(list_lignes)
+
+                # Sort list_lignes based on the 4th element (VALEUR)
+                list_lignes.sort(key=itemgetter(3))
+
+                # Convert tuples to lists, modify, and convert back to tuples
+                for i in range(len(list_lignes)):
+                    temp_list = list(list_lignes[i])  # Convert tuple to list
+                    temp_list[3] = i + 1  # Modify the 4th element
+                    list_lignes[i] = tuple(temp_list)  # Convert list back to tuple
+                print(list_lignes)
+
+                for i in range(len(list_lignes)):
+                    
+                    if list_lignes[i][2] == ROW :    
+                        testo = list_lignes[i][3]  # Ensure RESULTAT is correctly set for each line
+
+            except Exception as e :  
+                logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
+                continue
 
             query = ("REPLACE INTO prm_ref_result "
                     "(idLigne, idObjet, TBD, PAGE, OBJET, DAR_REF, PERD, RA_CODE, COLS_CODE, ROWS_CODE, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT, VALEUR, FORMULE, NIV) "
@@ -262,62 +285,68 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
             
         elif TYPE == "LIGNE" and FAMILLE == "POIDS":
+            try : 
 
-            # Fetch NIV for the given ROWCODE
-            query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}'")
-            cur.execute(query)
-            test = cur.fetchone()
-            
-            if test:
-                test = test[0]
-                print('test', test)
-            else:
-                raise ValueError("No result found for the given idObjet, COLS_CODE, and ROWS_CODE")
+                # Fetch NIV for the given ROWCODE
+                query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}'")
+                cur.execute(query)
+                test = cur.fetchone()
+                
+                if test:
+                    test = test[0]
+                    print('test', test)
+                else:
+                    raise ValueError("No result found for the given idObjet, COLS_CODE, and ROWS_CODE")
 
-            if int(test) == 1:
-                poids = 1
+                if int(test) == 1:
+                    poids = 1
+                    continue
+
+                # Fetch composant details
+                query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                cur.execute(query)
+                composant = cur.fetchall()[0]
+                
+                if not composant:
+                    raise ValueError("No composant found for the given idColsCib")
+
+                # Fetch the numerator (NIV = 0)
+                query = (f"SELECT VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' AND NIV = 0")
+                cur.execute(query)
+                numerateur = cur.fetchone()
+                
+                if numerateur:
+                    numerateur = numerateur[0]
+                    print("niv 0", numerateur)
+                else:
+                    raise ValueError("No result found for the numerator query")
+
+                # Fetch the denominator (NIV = 1)
+                query = (f"SELECT VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 1")
+                cur.execute(query)
+                denumerateur = cur.fetchone()
+                
+                if denumerateur:
+                    denumerateur = denumerateur[0]
+                    print("niv 1", denumerateur)
+                else:
+                    raise ValueError("No result found for the denominator query")
+
+                # Calculate the weight (poids)
+                try:
+                    poids = float(numerateur) / float(denumerateur)
+                    print("le poids est", poids)
+                except ZeroDivisionError:
+                    raise ValueError("Denominator is zero, cannot divide by zero")
+                except ValueError as e:
+                    raise ValueError(f"Error in conversion to float: {e}")
+                
+                RESULTAT = poids
+
+            except Exception as e :  
+                logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
                 continue
-
-            # Fetch composant details
-            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
-            cur.execute(query)
-            composant = cur.fetchall()[0]
             
-            if not composant:
-                raise ValueError("No composant found for the given idColsCib")
-
-            # Fetch the numerator (NIV = 0)
-            query = (f"SELECT VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' AND NIV = 0")
-            cur.execute(query)
-            numerateur = cur.fetchone()
-            
-            if numerateur:
-                numerateur = numerateur[0]
-                print("niv 0", numerateur)
-            else:
-                raise ValueError("No result found for the numerator query")
-
-            # Fetch the denominator (NIV = 1)
-            query = (f"SELECT VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 1")
-            cur.execute(query)
-            denumerateur = cur.fetchone()
-            
-            if denumerateur:
-                denumerateur = denumerateur[0]
-                print("niv 1", denumerateur)
-            else:
-                raise ValueError("No result found for the denominator query")
-
-            # Calculate the weight (poids)
-            try:
-                poids = float(numerateur) / float(denumerateur)
-                print("le poids est", poids)
-            except ZeroDivisionError:
-                raise ValueError("Denominator is zero, cannot divide by zero")
-            except ValueError as e:
-                raise ValueError(f"Error in conversion to float: {e}")
-            
-            RESULTAT = poids
             query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
             values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FAMILLE,1)
         

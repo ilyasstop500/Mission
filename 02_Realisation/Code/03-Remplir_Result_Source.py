@@ -57,8 +57,10 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
 
                 if results:
                     VALEUR = results[0][-1]
+                    MSG = "GOOD"
                 else:
-                    VALEUR = None  # Or any default value you want to use
+                    VALEUR = 0  # Or any default value you want to use
+                    MSG = "NO ENTRIES FOR CHOSEN PERIOD"
 
                 
             # exception in the case of an error that will send the "ERROR" msg 
@@ -68,8 +70,8 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
                 query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,FORMULE,NIV,MSG)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
                 values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,"PAS DE FORMULE - CALCUL SOURCE",NIV,"ERROR")
                 cur.execute(query,values)
-            query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-            values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,VALEUR,"PAS DE FORMULE - CALCUL SOURCE",NIV)
+            query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV,MSG)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s)")
+            values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,VALEUR,"PAS DE FORMULE - CALCUL SOURCE",NIV,MSG)
             
             
             # Execute the query with the values
