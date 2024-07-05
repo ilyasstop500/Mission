@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  cr7;
+CREATE DATABASE IF NOT EXISTS  jojo;
 
-USE cr7;
+USE jojo;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
@@ -77,12 +77,12 @@ CREATE TABLE IF NOT EXISTS `prm_ra_liens` (
 
 
 CREATE TABLE IF NOT EXISTS `prm_ref_result` (
-  `idLigne` int PRIMARY KEY,
+  `idLigne` int ,
   `idObjet` int DEFAULT NULL,
   `TBD` varchar(200) DEFAULT NULL,
   `PAGE` varchar(200) DEFAULT NULL,
   `OBJET` varchar(200) DEFAULT NULL,
-  `DAR_REF` varchar(10) DEFAULT NULL,
+  `DAR_REF` varchar(10) NOT NULL,
   `PERD` varchar(10) DEFAULT NULL,
   `RA_CODE` varchar(10) DEFAULT NULL,
   `COLS_CODE` varchar(10) DEFAULT NULL,
@@ -95,8 +95,8 @@ CREATE TABLE IF NOT EXISTS `prm_ref_result` (
   `FORMULE` varchar(200) DEFAULT NULL,
   `MSG` varchar(200) DEFAULT 'GOOD',
   `NIV` varchar(200) DEFAULT '0',
-  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
-  CONSTRAINT UC_RESULT UNIQUE (`idLigne`)
+  PRIMARY KEY (`idLigne`, `DAR_REF` ),
+  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_ref_sql` (
