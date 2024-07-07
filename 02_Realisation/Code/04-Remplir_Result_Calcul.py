@@ -366,9 +366,13 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         # Commit the transaction
                         cnx.commit()
 
+                            
+
                 except Exception as e :  
                     logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
                     continue
+
+                
 
         except Exception as e :  
                     logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
