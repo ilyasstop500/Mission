@@ -54,7 +54,7 @@ def remplir_ref_sql (dateref,user,pwd,ip,schema) :
 
             #-------------------------------------------------------------------- FIRST STEP : GET THE CORRECT SQL MODEL -------------------------------------------------------------------------------
 
-            idLigne = link[0]
+            idLigne = str(link[0]) + '/' + Parametres.dateref
 
             idCol = link[4]
             if len(str(idCol)) == 0 : 
