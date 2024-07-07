@@ -4,7 +4,7 @@ username = 'root'
 password =  '1234'
 ip_address =  '127.0.0.1'
 schema_name = 'ow3'
-dateref = "202412"
+dateref = "202405"
 
 
 
