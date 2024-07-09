@@ -20,3 +20,25 @@
 2024-07-09 11:28:48 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
 2024-07-09 11:28:48 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
 2024-07-09 11:28:48 DEBUG 'FF15/prm_cols_composant.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-09 11:45:26 DEBUG Building SSL context
+2024-07-09 11:45:26 DEBUG Switching to SSL
+2024-07-09 11:45:26 DEBUG SSL has been enabled
+2024-07-09 11:45:26 DEBUG Starting authorization phase
+2024-07-09 11:45:26 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-09 11:45:26 INFO package: mysql.connector.plugins
+2024-07-09 11:45:26 INFO plugin_name: caching_sha2_password
+2024-07-09 11:45:26 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-09 11:45:26 DEBUG Exchanging further packets
+2024-07-09 11:45:26 DEBUG caching_sha2_password completed succesfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-09 11:45:26 DEBUG 'FF15/prm_cols_composant.csv' csv uploaded successfully
