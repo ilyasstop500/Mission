@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  ow3;
+CREATE DATABASE IF NOT EXISTS  rein;
 
-USE ow3;
+USE rein;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
