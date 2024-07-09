@@ -9,6 +9,7 @@ from ConDB import con_to_db
 from operator import itemgetter
 from datetime import datetime
 import Parametres
+import json
 
 
 import logging
@@ -18,7 +19,7 @@ logging.basicConfig(
     level = logging.DEBUG,
     format = "%(asctime)s %(levelname)s %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename="ResultCalcul.log"
+    filename=r"Mission\02_Realisation\Code\Logs\ResultSource.log"
 )
 
 
@@ -144,6 +145,31 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         cur.execute(query,values)
                         # Commit the transaction
                         cnx.commit()
+
+                        # dict containing all value inserted into the db 
+                        mydict = {
+                                "idLigne" : idLigne , 
+                                "idObjet" : idObjet ,
+                                "TBD" : TBD,
+                                "PAGE" : PAGE ,
+                                "OBJET" : OBJET ,
+                                "DAT_REF" : DARREF ,
+                                "PERD" : PERD ,
+                                "RA_CODE" : RA ,
+                                "COLS_CODE" : COL , 
+                                "ROWS_CODE" : ROW,
+                                "SQL_CODE_SRC" : " ", 
+                                "SQL_CODE_FINAL" : " " ,
+                                "PERIMETRE" : PERIMETRE ,
+                                "DATE_TRT" : str(DATE_TRT) , 
+                                "VALEUR" : RESULTAT,
+                                "FORMULE" : FAMILLE ,
+                                "MSG" : "GOOD",
+                                "NIV" : 1
+                            }
+                        
+                        # saving the dict in the log file
+                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
                             
                         
 
@@ -186,6 +212,31 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         # Commit the transaction
                         cnx.commit()
 
+                        # dict containing all value inserted into the db 
+                        mydict = {
+                                "idLigne" : idLigne , 
+                                "idObjet" : idObjet ,
+                                "TBD" : TBD,
+                                "PAGE" : PAGE ,
+                                "OBJET" : OBJET ,
+                                "DAT_REF" : DARREF ,
+                                "PERD" : PERD ,
+                                "RA_CODE" : RA ,
+                                "COLS_CODE" : COL , 
+                                "ROWS_CODE" : ROW,
+                                "SQL_CODE_SRC" : " ", 
+                                "SQL_CODE_FINAL" : " " ,
+                                "PERIMETRE" : PERIMETRE ,
+                                "DATE_TRT" : str(DATE_TRT) , 
+                                "VALEUR" : RESULTAT,
+                                "FORMULE" : FAMILLE ,
+                                "MSG" : "GOOD",
+                                "NIV" : 1
+                            }
+                        
+                        # saving the dict in the log file
+                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
+
                     elif TYPE == "LIGNE" and FAMILLE == "MIN":
 
                         try : 
@@ -222,6 +273,31 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         cur.execute(query,values)
                         # Commit the transaction
                         cnx.commit()
+
+                        # dict containing all value inserted into the db 
+                        mydict = {
+                                "idLigne" : idLigne , 
+                                "idObjet" : idObjet ,
+                                "TBD" : TBD,
+                                "PAGE" : PAGE ,
+                                "OBJET" : OBJET ,
+                                "DAT_REF" : DARREF ,
+                                "PERD" : PERD ,
+                                "RA_CODE" : RA ,
+                                "COLS_CODE" : COL , 
+                                "ROWS_CODE" : ROW,
+                                "SQL_CODE_SRC" : " ", 
+                                "SQL_CODE_FINAL" : " " ,
+                                "PERIMETRE" : PERIMETRE ,
+                                "DATE_TRT" : str(DATE_TRT) , 
+                                "VALEUR" : RESULTAT,
+                                "FORMULE" : FAMILLE ,
+                                "MSG" : "GOOD",
+                                "NIV" : 1
+                            }
+                        
+                        # saving the dict in the log file
+                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
                     
 
@@ -285,6 +361,31 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         cur.execute(query, values)
                         # Commit the transaction
                         cnx.commit()
+
+                        # dict containing all value inserted into the db 
+                        mydict = {
+                                "idLigne" : idLigne , 
+                                "idObjet" : idObjet ,
+                                "TBD" : TBD,
+                                "PAGE" : PAGE ,
+                                "OBJET" : OBJET ,
+                                "DAT_REF" : DARREF ,
+                                "PERD" : PERD ,
+                                "RA_CODE" : RA ,
+                                "COLS_CODE" : COL , 
+                                "ROWS_CODE" : ROW,
+                                "SQL_CODE_SRC" : " ", 
+                                "SQL_CODE_FINAL" : " " ,
+                                "PERIMETRE" : PERIMETRE ,
+                                "DATE_TRT" : str(DATE_TRT) , 
+                                "VALEUR" : RESULTAT,
+                                "FORMULE" : FAMILLE ,
+                                "MSG" : "GOOD",
+                                "NIV" : 1
+                            }
+                        
+                        # saving the dict in the log file
+                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
 
 
@@ -365,6 +466,31 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         cur.execute(query,values)
                         # Commit the transaction
                         cnx.commit()
+
+                        # dict containing all value inserted into the db 
+                        mydict = {
+                                "idLigne" : idLigne , 
+                                "idObjet" : idObjet ,
+                                "TBD" : TBD,
+                                "PAGE" : PAGE ,
+                                "OBJET" : OBJET ,
+                                "DAT_REF" : DARREF ,
+                                "PERD" : PERD ,
+                                "RA_CODE" : RA ,
+                                "COLS_CODE" : COL , 
+                                "ROWS_CODE" : ROW,
+                                "SQL_CODE_SRC" : " ", 
+                                "SQL_CODE_FINAL" : " " ,
+                                "PERIMETRE" : PERIMETRE ,
+                                "DATE_TRT" : str(DATE_TRT) , 
+                                "VALEUR" : RESULTAT,
+                                "FORMULE" : FAMILLE ,
+                                "MSG" : "GOOD",
+                                "NIV" : 1
+                            }
+                        
+                        # saving the dict in the log file
+                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
                             
 
