@@ -5752,3 +5752,1744 @@
     "NIV": 1
 }'
 2024-07-09 11:45:13 ERROR Can not calculate value for line with id '457/202412''NoneType' object is not subscriptable
+2024-07-11 15:23:08 DEBUG Building SSL context
+2024-07-11 15:23:08 DEBUG Switching to SSL
+2024-07-11 15:23:08 DEBUG SSL has been enabled
+2024-07-11 15:23:08 DEBUG Starting authorization phase
+2024-07-11 15:23:08 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:23:08 INFO package: mysql.connector.plugins
+2024-07-11 15:23:08 INFO plugin_name: caching_sha2_password
+2024-07-11 15:23:08 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:23:08 DEBUG Exchanging further packets
+2024-07-11 15:23:08 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:23:13 DEBUG Building SSL context
+2024-07-11 15:23:13 DEBUG Switching to SSL
+2024-07-11 15:23:13 DEBUG SSL has been enabled
+2024-07-11 15:23:13 DEBUG Starting authorization phase
+2024-07-11 15:23:13 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:23:13 INFO package: mysql.connector.plugins
+2024-07-11 15:23:13 INFO plugin_name: caching_sha2_password
+2024-07-11 15:23:13 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:23:13 DEBUG Exchanging further packets
+2024-07-11 15:23:13 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:25:29 DEBUG Building SSL context
+2024-07-11 15:25:29 DEBUG Switching to SSL
+2024-07-11 15:25:29 DEBUG SSL has been enabled
+2024-07-11 15:25:29 DEBUG Starting authorization phase
+2024-07-11 15:25:29 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:25:29 INFO package: mysql.connector.plugins
+2024-07-11 15:25:29 INFO plugin_name: caching_sha2_password
+2024-07-11 15:25:29 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:25:29 DEBUG Exchanging further packets
+2024-07-11 15:25:29 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:26:16 DEBUG Building SSL context
+2024-07-11 15:26:16 DEBUG Switching to SSL
+2024-07-11 15:26:16 DEBUG SSL has been enabled
+2024-07-11 15:26:16 DEBUG Starting authorization phase
+2024-07-11 15:26:16 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:26:16 INFO package: mysql.connector.plugins
+2024-07-11 15:26:16 INFO plugin_name: caching_sha2_password
+2024-07-11 15:26:16 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:26:16 DEBUG Exchanging further packets
+2024-07-11 15:26:16 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '10/202405'cannot access local variable 'composant' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '11/202405'cannot access local variable 'composant' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '14/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '15/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '16/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '17/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '2/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '3/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '4/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '5/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '8/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:26:16 ERROR Can not calculate value for line with id '9/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 DEBUG Building SSL context
+2024-07-11 15:32:29 DEBUG Switching to SSL
+2024-07-11 15:32:29 DEBUG SSL has been enabled
+2024-07-11 15:32:29 DEBUG Starting authorization phase
+2024-07-11 15:32:29 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:32:29 INFO package: mysql.connector.plugins
+2024-07-11 15:32:29 INFO plugin_name: caching_sha2_password
+2024-07-11 15:32:29 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:32:29 DEBUG Exchanging further packets
+2024-07-11 15:32:29 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '14/202405/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '2/202405/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '8/202405/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '15/202405/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '3/202405/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '9/202405/202405'cannot access local variable 'temp_list' where it is not associated with a value
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '10/202405/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '16/202405/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '4/202405/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '11/202405/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '17/202405/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:32:29 ERROR Can not calculate value for line with id '5/202405/202405'No result found for the given idObjet, COLS_CODE, and ROWS_CODE
+2024-07-11 15:34:29 DEBUG Building SSL context
+2024-07-11 15:34:29 DEBUG Switching to SSL
+2024-07-11 15:34:29 DEBUG SSL has been enabled
+2024-07-11 15:34:29 DEBUG Starting authorization phase
+2024-07-11 15:34:29 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:34:29 INFO package: mysql.connector.plugins
+2024-07-11 15:34:29 INFO plugin_name: caching_sha2_password
+2024-07-11 15:34:29 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:34:29 DEBUG Exchanging further packets
+2024-07-11 15:34:29 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:34:29 DEBUG uploaded into database line '14/202405' with value '225.0' '{
+    "idLigne": "14/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.478633",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '2/202405' with value '225.0' '{
+    "idLigne": "2/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.483007",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '8/202405' with value '225.0' '{
+    "idLigne": "8/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.486564",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '15/202405' with value '150.0' '{
+    "idLigne": "15/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.490790",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '3/202405' with value '150.0' '{
+    "idLigne": "3/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.495057",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '9/202405' with value '150.0' '{
+    "idLigne": "9/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.498757",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '10/202405' with value '150.0' '{
+    "idLigne": "10/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "RANG",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.502777",
+    "VALEUR": "150.0",
+    "FORMULE": "RANG",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '4/202405' with value '150.0' '{
+    "idLigne": "4/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "RANG",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.508729",
+    "VALEUR": "150.0",
+    "FORMULE": "RANG",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '11/202405' with value '0.6' '{
+    "idLigne": "11/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "POIDS",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.513735",
+    "VALEUR": 0.6,
+    "FORMULE": "POIDS",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:34:29 DEBUG uploaded into database line '5/202405' with value '0.4' '{
+    "idLigne": "5/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "POIDS",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:34:29.520038",
+    "VALEUR": 0.4,
+    "FORMULE": "POIDS",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG Building SSL context
+2024-07-11 15:41:09 DEBUG Switching to SSL
+2024-07-11 15:41:09 DEBUG SSL has been enabled
+2024-07-11 15:41:09 DEBUG Starting authorization phase
+2024-07-11 15:41:09 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:41:09 INFO package: mysql.connector.plugins
+2024-07-11 15:41:09 INFO plugin_name: caching_sha2_password
+2024-07-11 15:41:09 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:41:09 DEBUG Exchanging further packets
+2024-07-11 15:41:09 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:41:09 DEBUG uploaded into database line '14/202405' with value '225.0' '{
+    "idLigne": "14/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.654033",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '2/202405' with value '225.0' '{
+    "idLigne": "2/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.659039",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '20/202405' with value '225.0' '{
+    "idLigne": "20/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.663224",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '26/202405' with value '225.0' '{
+    "idLigne": "26/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.667656",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '32/202405' with value '225.0' '{
+    "idLigne": "32/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.672200",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '8/202405' with value '225.0' '{
+    "idLigne": "8/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.675761",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '15/202405' with value '150.0' '{
+    "idLigne": "15/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.681470",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '21/202405' with value '150.0' '{
+    "idLigne": "21/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.686185",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '27/202405' with value '150.0' '{
+    "idLigne": "27/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.690514",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '3/202405' with value '150.0' '{
+    "idLigne": "3/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.694526",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '33/202405' with value '150.0' '{
+    "idLigne": "33/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.698612",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 DEBUG uploaded into database line '9/202405' with value '150.0' '{
+    "idLigne": "9/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:41:09.703188",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '10/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '16/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '22/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '28/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '34/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '4/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '11/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '17/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '23/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '29/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '35/202405'Unread result found
+2024-07-11 15:41:09 ERROR Can not calculate value for line with id '5/202405'Unread result found
+2024-07-11 15:42:53 DEBUG Building SSL context
+2024-07-11 15:42:53 DEBUG Switching to SSL
+2024-07-11 15:42:53 DEBUG SSL has been enabled
+2024-07-11 15:42:53 DEBUG Starting authorization phase
+2024-07-11 15:42:53 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:42:53 INFO package: mysql.connector.plugins
+2024-07-11 15:42:53 INFO plugin_name: caching_sha2_password
+2024-07-11 15:42:53 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:42:53 DEBUG Exchanging further packets
+2024-07-11 15:42:53 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:42:53 DEBUG uploaded into database line '14/202405' with value '225.0' '{
+    "idLigne": "14/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.562613",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '2/202405' with value '225.0' '{
+    "idLigne": "2/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.567664",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '20/202405' with value '225.0' '{
+    "idLigne": "20/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.571801",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '26/202405' with value '225.0' '{
+    "idLigne": "26/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.575811",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '32/202405' with value '225.0' '{
+    "idLigne": "32/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.579902",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '8/202405' with value '225.0' '{
+    "idLigne": "8/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.583396",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '15/202405' with value '150.0' '{
+    "idLigne": "15/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.587999",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '21/202405' with value '150.0' '{
+    "idLigne": "21/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.592007",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '27/202405' with value '150.0' '{
+    "idLigne": "27/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.596483",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '3/202405' with value '150.0' '{
+    "idLigne": "3/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.601034",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '33/202405' with value '150.0' '{
+    "idLigne": "33/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.604547",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 DEBUG uploaded into database line '9/202405' with value '150.0' '{
+    "idLigne": "9/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:42:53.609168",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '10/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '16/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '22/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '28/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '34/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '4/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '11/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '17/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '23/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '29/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '35/202405'Unread result found
+2024-07-11 15:42:53 ERROR Can not calculate value for line with id '5/202405'Unread result found
+2024-07-11 15:46:41 DEBUG Building SSL context
+2024-07-11 15:46:41 DEBUG Switching to SSL
+2024-07-11 15:46:41 DEBUG SSL has been enabled
+2024-07-11 15:46:41 DEBUG Starting authorization phase
+2024-07-11 15:46:41 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:46:41 INFO package: mysql.connector.plugins
+2024-07-11 15:46:41 INFO plugin_name: caching_sha2_password
+2024-07-11 15:46:41 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:46:41 DEBUG Exchanging further packets
+2024-07-11 15:46:41 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:46:41 DEBUG uploaded into database line '14/202405' with value '225.0' '{
+    "idLigne": "14/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.666943",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '2/202405' with value '225.0' '{
+    "idLigne": "2/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.672922",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '8/202405' with value '225.0' '{
+    "idLigne": "8/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.678223",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '15/202405' with value '150.0' '{
+    "idLigne": "15/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.683261",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '3/202405' with value '150.0' '{
+    "idLigne": "3/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.689068",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '9/202405' with value '150.0' '{
+    "idLigne": "9/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.692718",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '10/202405' with value '150.0' '{
+    "idLigne": "10/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "RANG",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.699525",
+    "VALEUR": "150.0",
+    "FORMULE": "RANG",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '4/202405' with value '150.0' '{
+    "idLigne": "4/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "RANG",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.706151",
+    "VALEUR": "150.0",
+    "FORMULE": "RANG",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '11/202405' with value '0.6' '{
+    "idLigne": "11/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "POIDS",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.711027",
+    "VALEUR": 0.6,
+    "FORMULE": "POIDS",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 DEBUG uploaded into database line '5/202405' with value '0.4' '{
+    "idLigne": "5/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "POIDS",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:46:41.716557",
+    "VALEUR": 0.4,
+    "FORMULE": "POIDS",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '20/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '26/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '32/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '21/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '27/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '33/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '22/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '28/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '34/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '23/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '29/202405''NoneType' object is not subscriptable
+2024-07-11 15:46:41 ERROR Can not calculate value for line with id '35/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:41 DEBUG Building SSL context
+2024-07-11 15:50:41 DEBUG Switching to SSL
+2024-07-11 15:50:42 DEBUG SSL has been enabled
+2024-07-11 15:50:42 DEBUG Starting authorization phase
+2024-07-11 15:50:42 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:50:42 INFO package: mysql.connector.plugins
+2024-07-11 15:50:42 INFO plugin_name: caching_sha2_password
+2024-07-11 15:50:42 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:50:42 DEBUG Exchanging further packets
+2024-07-11 15:50:42 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:50:42 DEBUG uploaded into database line '14/202405' with value '225.0' '{
+    "idLigne": "14/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.010131",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '2/202405' with value '225.0' '{
+    "idLigne": "2/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.016445",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '8/202405' with value '225.0' '{
+    "idLigne": "8/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MAX",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.021020",
+    "VALEUR": "225.0",
+    "FORMULE": "MAX",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '15/202405' with value '150.0' '{
+    "idLigne": "15/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.025348",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '3/202405' with value '150.0' '{
+    "idLigne": "3/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.028355",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '9/202405' with value '150.0' '{
+    "idLigne": "9/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "MIN",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.032745",
+    "VALEUR": "150.0",
+    "FORMULE": "MIN",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '10/202405' with value '150.0' '{
+    "idLigne": "10/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "RANG",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.036832",
+    "VALEUR": "150.0",
+    "FORMULE": "RANG",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '4/202405' with value '150.0' '{
+    "idLigne": "4/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "RANG",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.043142",
+    "VALEUR": "150.0",
+    "FORMULE": "RANG",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '11/202405' with value '0.6' '{
+    "idLigne": "11/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "POIDS",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.047479",
+    "VALEUR": 0.6,
+    "FORMULE": "POIDS",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 DEBUG uploaded into database line '5/202405' with value '0.4' '{
+    "idLigne": "5/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": 99,
+    "COLS_CODE": "POIDS",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": " ",
+    "SQL_CODE_FINAL": " ",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-07-11 15:50:42.053188",
+    "VALEUR": 0.4,
+    "FORMULE": "POIDS",
+    "MSG": "GOOD",
+    "NIV": 1
+}'
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '20/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '26/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '32/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '21/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '27/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '33/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '22/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '28/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '34/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '23/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '29/202405''NoneType' object is not subscriptable
+2024-07-11 15:50:42 ERROR Can not calculate value for line with id '35/202405''NoneType' object is not subscriptable
+2024-07-11 15:58:41 DEBUG populating 'build' schema's resultsql source  with dateref '202405'
+2024-07-11 15:58:41 DEBUG Building SSL context
+2024-07-11 15:58:41 DEBUG Switching to SSL
+2024-07-11 15:58:41 DEBUG SSL has been enabled
+2024-07-11 15:58:41 DEBUG Starting authorization phase
+2024-07-11 15:58:41 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:58:41 INFO package: mysql.connector.plugins
+2024-07-11 15:58:41 INFO plugin_name: caching_sha2_password
+2024-07-11 15:58:41 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:58:41 DEBUG Exchanging further packets
+2024-07-11 15:58:41 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:58:41 DEBUG uploaded into database line '0/202405' with value '150.0' '{
+    "idLigne": "0/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'CASABLANCA' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111') GROUP BY '202405','0','RACODE','VERST' ,'CASABLANCA' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:41.252509",
+    "VALEUR": 150.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:41 DEBUG uploaded into database line '1/202405' with value '300.0' '{
+    "idLigne": "1/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'CASABLANCA' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111') GROUP BY '202405','0','RACODE','REMB' ,'CASABLANCA' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:41.271007",
+    "VALEUR": 300.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:41 DEBUG uploaded into database line '12/202405' with value '375.0' '{
+    "idLigne": "12/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111','112') GROUP BY '202405','0','RACODE','VERST' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:41.259505",
+    "VALEUR": 375.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 15:58:41 DEBUG uploaded into database line '13/202405' with value '750.0' '{
+    "idLigne": "13/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111','112') GROUP BY '202405','0','RACODE','REMB' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:41.277019",
+    "VALEUR": 750.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 15:58:41 DEBUG uploaded into database line '6/202405' with value '225.0' '{
+    "idLigne": "6/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'RABAT' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('112') GROUP BY '202405','0','RACODE','VERST' ,'RABAT' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:41.264951",
+    "VALEUR": 225.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:41 DEBUG uploaded into database line '7/202405' with value '450.0' '{
+    "idLigne": "7/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'RABAT' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('112') GROUP BY '202405','0','RACODE','REMB' ,'RABAT' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:41.282897",
+    "VALEUR": 450.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:43 DEBUG populating 'build' schema's resultsql source  with dateref '202405'
+2024-07-11 15:58:43 DEBUG Building SSL context
+2024-07-11 15:58:43 DEBUG Switching to SSL
+2024-07-11 15:58:43 DEBUG SSL has been enabled
+2024-07-11 15:58:43 DEBUG Starting authorization phase
+2024-07-11 15:58:43 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 15:58:43 INFO package: mysql.connector.plugins
+2024-07-11 15:58:43 INFO plugin_name: caching_sha2_password
+2024-07-11 15:58:43 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 15:58:43 DEBUG Exchanging further packets
+2024-07-11 15:58:43 DEBUG caching_sha2_password completed succesfully
+2024-07-11 15:58:43 DEBUG uploaded into database line '0/202405' with value '150.0' '{
+    "idLigne": "0/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'CASABLANCA' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111') GROUP BY '202405','0','RACODE','VERST' ,'CASABLANCA' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:43.303771",
+    "VALEUR": 150.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:43 DEBUG uploaded into database line '1/202405' with value '300.0' '{
+    "idLigne": "1/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'CASABLANCA' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111') GROUP BY '202405','0','RACODE','REMB' ,'CASABLANCA' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:43.321846",
+    "VALEUR": 300.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:43 DEBUG uploaded into database line '12/202405' with value '375.0' '{
+    "idLigne": "12/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111','112') GROUP BY '202405','0','RACODE','VERST' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:43.311383",
+    "VALEUR": 375.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 15:58:43 DEBUG uploaded into database line '13/202405' with value '750.0' '{
+    "idLigne": "13/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111','112') GROUP BY '202405','0','RACODE','REMB' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:43.328422",
+    "VALEUR": 750.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 15:58:43 DEBUG uploaded into database line '6/202405' with value '225.0' '{
+    "idLigne": "6/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'RABAT' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('112') GROUP BY '202405','0','RACODE','VERST' ,'RABAT' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:43.316219",
+    "VALEUR": 225.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 15:58:43 DEBUG uploaded into database line '7/202405' with value '450.0' '{
+    "idLigne": "7/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'RABAT' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('112') GROUP BY '202405','0','RACODE','REMB' ,'RABAT' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 15:58:43.333795",
+    "VALEUR": 450.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG populating 'build' schema's resultsql source  with dateref '202405'
+2024-07-11 16:00:07 DEBUG Building SSL context
+2024-07-11 16:00:07 DEBUG Switching to SSL
+2024-07-11 16:00:07 DEBUG SSL has been enabled
+2024-07-11 16:00:07 DEBUG Starting authorization phase
+2024-07-11 16:00:07 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-11 16:00:07 INFO package: mysql.connector.plugins
+2024-07-11 16:00:07 INFO plugin_name: caching_sha2_password
+2024-07-11 16:00:07 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-11 16:00:07 DEBUG Exchanging further packets
+2024-07-11 16:00:07 DEBUG caching_sha2_password completed succesfully
+2024-07-11 16:00:07 DEBUG uploaded into database line '0/202405' with value '150.0' '{
+    "idLigne": "0/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'CASABLANCA' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111') GROUP BY '202405','0','RACODE','VERST' ,'CASABLANCA' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.223693",
+    "VALEUR": 150.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '1/202405' with value '300.0' '{
+    "idLigne": "1/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "CASABLANCA",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'CASABLANCA' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111') GROUP BY '202405','0','RACODE','REMB' ,'CASABLANCA' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.243330",
+    "VALEUR": 300.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '12/202405' with value '375.0' '{
+    "idLigne": "12/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111','112') GROUP BY '202405','0','RACODE','VERST' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.231410",
+    "VALEUR": 375.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '13/202405' with value '750.0' '{
+    "idLigne": "13/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('111','112') GROUP BY '202405','0','RACODE','REMB' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.250601",
+    "VALEUR": 750.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '18/202405' with value '300.0' '{
+    "idLigne": "18/202405",
+    "idObjet": 1,
+    "TBD": "Algerie",
+    "PAGE": "1",
+    "OBJET": "Algerie",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "ALGER",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'1' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'ALGER' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('121') GROUP BY '202405','1','RACODE','VERST' ,'ALGER' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.262641",
+    "VALEUR": 300.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '19/202405' with value '600.0' '{
+    "idLigne": "19/202405",
+    "idObjet": 1,
+    "TBD": "Algerie",
+    "PAGE": "1",
+    "OBJET": "Algerie",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "ALGER",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'1' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'ALGER' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('121') GROUP BY '202405','1','RACODE','REMB' ,'ALGER' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.280898",
+    "VALEUR": 600.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '24/202405' with value '450.0' '{
+    "idLigne": "24/202405",
+    "idObjet": 1,
+    "TBD": "Algerie",
+    "PAGE": "1",
+    "OBJET": "Algerie",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "TIZI",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'1' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'TIZI' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('122') GROUP BY '202405','1','RACODE','VERST' ,'TIZI' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.269339",
+    "VALEUR": 450.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '25/202405' with value '900.0' '{
+    "idLigne": "25/202405",
+    "idObjet": 1,
+    "TBD": "Algerie",
+    "PAGE": "1",
+    "OBJET": "Algerie",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "TIZI",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'1' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'TIZI' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('122') GROUP BY '202405','1','RACODE','REMB' ,'TIZI' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.288692",
+    "VALEUR": 900.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '30/202405' with value '750.0' '{
+    "idLigne": "30/202405",
+    "idObjet": 1,
+    "TBD": "Algerie",
+    "PAGE": "1",
+    "OBJET": "Algerie",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'1' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('121','122') GROUP BY '202405','1','RACODE','VERST' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.274482",
+    "VALEUR": 750.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '31/202405' with value '1500.0' '{
+    "idLigne": "31/202405",
+    "idObjet": 1,
+    "TBD": "Algerie",
+    "PAGE": "1",
+    "OBJET": "Algerie",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "TOTAL",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'1' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'TOTAL' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('121','122') GROUP BY '202405','1','RACODE','REMB' ,'TOTAL' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.294857",
+    "VALEUR": 1500.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "1"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '6/202405' with value '225.0' '{
+    "idLigne": "6/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "VERST",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'VERST' AS COL,'RABAT' AS `ROW`,'[M-11]' AS PERD,Sum(MT_VERST) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('112') GROUP BY '202405','0','RACODE','VERST' ,'RABAT' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.237142",
+    "VALEUR": 225.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'
+2024-07-11 16:00:07 DEBUG uploaded into database line '7/202405' with value '450.0' '{
+    "idLigne": "7/202405",
+    "idObjet": 0,
+    "TBD": "Maroc",
+    "PAGE": "1",
+    "OBJET": "Maroc",
+    "DAT_REF": "202405",
+    "PERD": "[M-11]",
+    "RA_CODE": "RACODE",
+    "COLS_CODE": "REMB",
+    "ROWS_CODE": "RABAT",
+    "SQL_CODE_SRC": "SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum([p_INDI]) AS VAL FROM [p_CUBE] WHERE TRUE GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]",
+    "SQL_CODE_FINAL": "SELECT '202405' AS DAR,'0' AS idObjet,'RACODE' AS RA,'REMB' AS COL,'RABAT' AS `ROW`,'[M-11]' AS PERD,Sum(MT_REMB) AS VAL FROM vw_CUBE_DPLT_ICARE_BPCE_ENCR WHERE TRUE  AND CODE_NIV3_ICARE IN ('3_EPAR_BIL','3_EPAR_SAL','3_EQUIP') AND PERD_ARRT_INFO = 202306 AND CODE_ORGN_FINN IN ('112') GROUP BY '202405','0','RACODE','REMB' ,'RABAT' ,'[M-11]'",
+    "PERIMETRE": "SOURCE",
+    "DATE_TRT": "2024-07-11 16:00:07.257426",
+    "VALEUR": 450.0,
+    "MSG": "PAS DE FORMULE - CALCUL SOURCE",
+    "NIV": "0"
+}'

@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  rein;
+CREATE DATABASE IF NOT EXISTS  build;
 
-USE rein;
+USE build;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
