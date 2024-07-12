@@ -55,9 +55,15 @@ def  cols_order(user,pwd,ip,schema) :
     #Objet_order = list(set(Objet_order))
     #print(Objet_order)
 
+
+    # 5od parent ou trier m3a ga3 wlado 
+    # sayeb tous les substrings
+    # gadhoum kamlin fla5er
+    
+
     Columns_order = list()
     
-    
+
 
     
               
