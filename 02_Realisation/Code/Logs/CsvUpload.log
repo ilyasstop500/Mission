@@ -3888,3 +3888,179 @@
 2024-07-11 16:00:06 DEBUG The provided initial strategy is caching_sha2_password
 2024-07-11 16:00:06 DEBUG Exchanging further packets
 2024-07-11 16:00:06 DEBUG caching_sha2_password completed succesfully
+2024-07-12 13:22:26 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 13:22:26 DEBUG Building SSL context
+2024-07-12 13:22:26 DEBUG Switching to SSL
+2024-07-12 13:22:26 DEBUG SSL has been enabled
+2024-07-12 13:22:26 DEBUG Starting authorization phase
+2024-07-12 13:22:26 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 13:22:26 INFO package: mysql.connector.plugins
+2024-07-12 13:22:26 INFO plugin_name: caching_sha2_password
+2024-07-12 13:22:26 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 13:22:26 DEBUG Exchanging further packets
+2024-07-12 13:22:26 DEBUG caching_sha2_password completed succesfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 13:22:26 DEBUG 'FF15/prm_cols_composant.csv' csv uploaded successfully
+2024-07-12 15:33:54 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 15:33:54 DEBUG Building SSL context
+2024-07-12 15:33:54 DEBUG Switching to SSL
+2024-07-12 15:33:54 DEBUG SSL has been enabled
+2024-07-12 15:33:54 DEBUG Starting authorization phase
+2024-07-12 15:33:54 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 15:33:54 INFO package: mysql.connector.plugins
+2024-07-12 15:33:54 INFO plugin_name: caching_sha2_password
+2024-07-12 15:33:54 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 15:33:54 DEBUG Exchanging further packets
+2024-07-12 15:33:54 DEBUG caching_sha2_password completed succesfully
+2024-07-12 15:33:54 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 15:33:54 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 15:33:54 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 15:33:54 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 15:33:54 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 15:33:54 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 15:33:54 CRITICAL Can not load CSV data from 'FF15/prm_cols.csv':1366 (HY000): Incorrect integer value: '' for column 'COLS_ORDRE' at row 1
+2024-07-12 15:33:54 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 15:33:54 CRITICAL Can not load CSV data from 'FF15/prm_ra_liens.csv':1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`memz`.`prm_ra_liens`, CONSTRAINT `prm_ra_liens_ibfk_2` FOREIGN KEY (`idColsCib`) REFERENCES `prm_cols` (`idCol`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-07-12 15:33:54 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 15:33:54 CRITICAL Can not load CSV data from 'FF15/prm_cols_composant.csv':1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`memz`.`prm_cols_composant`, CONSTRAINT `prm_cols_composant_ibfk_2` FOREIGN KEY (`idColscib`) REFERENCES `prm_cols` (`idCol`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-07-12 15:34:46 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 15:34:46 DEBUG Building SSL context
+2024-07-12 15:34:46 DEBUG Switching to SSL
+2024-07-12 15:34:46 DEBUG SSL has been enabled
+2024-07-12 15:34:46 DEBUG Starting authorization phase
+2024-07-12 15:34:46 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 15:34:46 INFO package: mysql.connector.plugins
+2024-07-12 15:34:46 INFO plugin_name: caching_sha2_password
+2024-07-12 15:34:46 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 15:34:46 DEBUG Exchanging further packets
+2024-07-12 15:34:46 DEBUG caching_sha2_password completed succesfully
+2024-07-12 15:34:46 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 15:34:46 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 15:34:46 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 15:34:46 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 15:34:46 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 15:34:46 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 15:34:46 CRITICAL Can not load CSV data from 'FF15/prm_cols.csv':1366 (HY000): Incorrect integer value: '' for column 'COLS_ORDRE' at row 1
+2024-07-12 15:34:46 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 15:34:46 CRITICAL Can not load CSV data from 'FF15/prm_ra_liens.csv':1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`memz`.`prm_ra_liens`, CONSTRAINT `prm_ra_liens_ibfk_2` FOREIGN KEY (`idColsCib`) REFERENCES `prm_cols` (`idCol`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-07-12 15:34:46 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 15:34:46 CRITICAL Can not load CSV data from 'FF15/prm_cols_composant.csv':1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`memz`.`prm_cols_composant`, CONSTRAINT `prm_cols_composant_ibfk_2` FOREIGN KEY (`idColscib`) REFERENCES `prm_cols` (`idCol`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-07-12 15:37:25 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 15:37:25 DEBUG Building SSL context
+2024-07-12 15:37:25 DEBUG Switching to SSL
+2024-07-12 15:37:25 DEBUG SSL has been enabled
+2024-07-12 15:37:25 DEBUG Starting authorization phase
+2024-07-12 15:37:25 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 15:37:25 INFO package: mysql.connector.plugins
+2024-07-12 15:37:25 INFO plugin_name: caching_sha2_password
+2024-07-12 15:37:25 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 15:37:25 DEBUG Exchanging further packets
+2024-07-12 15:37:25 DEBUG caching_sha2_password completed succesfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 15:37:25 DEBUG 'FF15/prm_cols_composant.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 15:58:36 DEBUG Building SSL context
+2024-07-12 15:58:36 DEBUG Switching to SSL
+2024-07-12 15:58:36 DEBUG SSL has been enabled
+2024-07-12 15:58:36 DEBUG Starting authorization phase
+2024-07-12 15:58:36 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 15:58:36 INFO package: mysql.connector.plugins
+2024-07-12 15:58:36 INFO plugin_name: caching_sha2_password
+2024-07-12 15:58:36 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 15:58:36 DEBUG Exchanging further packets
+2024-07-12 15:58:36 DEBUG caching_sha2_password completed succesfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-12 15:58:36 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 15:58:36 CRITICAL Can not load CSV data from 'FF15/prm_cols_composant.csv':1366 (HY000): Incorrect integer value: '[A]' for column 'idColsSrc' at row 1
+2024-07-12 16:01:37 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 16:01:37 DEBUG Building SSL context
+2024-07-12 16:01:37 DEBUG Switching to SSL
+2024-07-12 16:01:37 DEBUG SSL has been enabled
+2024-07-12 16:01:37 DEBUG Starting authorization phase
+2024-07-12 16:01:37 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 16:01:37 INFO package: mysql.connector.plugins
+2024-07-12 16:01:37 INFO plugin_name: caching_sha2_password
+2024-07-12 16:01:37 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 16:01:37 DEBUG Exchanging further packets
+2024-07-12 16:01:37 DEBUG caching_sha2_password completed succesfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-12 16:01:37 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 16:01:37 CRITICAL Can not load CSV data from 'FF15/prm_cols_composant.csv':1366 (HY000): Incorrect integer value: '[A]' for column 'idColsSrc' at row 1
+2024-07-12 16:03:35 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 16:03:35 DEBUG Building SSL context
+2024-07-12 16:03:35 DEBUG Switching to SSL
+2024-07-12 16:03:35 DEBUG SSL has been enabled
+2024-07-12 16:03:35 DEBUG Starting authorization phase
+2024-07-12 16:03:35 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 16:03:35 INFO package: mysql.connector.plugins
+2024-07-12 16:03:35 INFO plugin_name: caching_sha2_password
+2024-07-12 16:03:35 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 16:03:35 DEBUG Exchanging further packets
+2024-07-12 16:03:35 DEBUG caching_sha2_password completed succesfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-12 16:03:35 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 16:03:35 CRITICAL Can not load CSV data from 'FF15/prm_cols_composant.csv':1366 (HY000): Incorrect integer value: '[A]' for column 'idColsSrc' at row 1
+2024-07-12 16:04:45 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF15'
+2024-07-12 16:04:45 DEBUG Building SSL context
+2024-07-12 16:04:45 DEBUG Switching to SSL
+2024-07-12 16:04:45 DEBUG SSL has been enabled
+2024-07-12 16:04:45 DEBUG Starting authorization phase
+2024-07-12 16:04:45 DEBUG The provided initial strategy is caching_sha2_password
+2024-07-12 16:04:45 INFO package: mysql.connector.plugins
+2024-07-12 16:04:45 INFO plugin_name: caching_sha2_password
+2024-07-12 16:04:45 INFO AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-07-12 16:04:45 DEBUG Exchanging further packets
+2024-07-12 16:04:45 DEBUG caching_sha2_password completed succesfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_tdb_objets.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_cols_calcul.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_sql_model.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_rows.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_cols.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_cols_filtre.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_ra_liens.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_rows_filtre.csv' csv uploaded successfully
+2024-07-12 16:04:45 DEBUG 'FF15/prm_cols_composant.csv' csv uploaded successfully

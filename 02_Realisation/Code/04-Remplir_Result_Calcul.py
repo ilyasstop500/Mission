@@ -110,7 +110,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     if TYPE == "COLONNE"  : 
                         try  :
                             list_composants = list()
-                            query =(f"SELECT  idObjet,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query =(f"SELECT  idObjetCib,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             list_composants = cur.fetchall()
                             #print(list_composants)
@@ -177,7 +177,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
                         try : 
 
-                            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
 
@@ -240,7 +240,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     elif TYPE == "LIGNE" and FAMILLE == "MIN":
 
                         try : 
-                            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
 
@@ -322,7 +322,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                                 continue
 
                             # Query to get composant details
-                            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
 
@@ -414,7 +414,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                                 continue
 
                             # Fetch composant details
-                            query = (f"SELECT idObjet, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
                             

@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  build;
+CREATE DATABASE IF NOT EXISTS  yip;
 
-USE build;
+USE yip;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
@@ -34,10 +34,13 @@ CREATE TABLE IF NOT EXISTS `prm_cols_calcul` (
 
 CREATE TABLE IF NOT EXISTS `prm_cols` (
   `idCol` int PRIMARY KEY,
+  `idObjet` int ,
   `COLS_CODE` varchar(200) DEFAULT NULL,
   `COLS_NATURE` varchar(200) DEFAULT NULL,
   `COLS_FORMULE` varchar(200) ,
   `COLS_ORDRE` int DEFAULT 0 
+
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
@@ -251,14 +254,16 @@ CREATE TABLE IF NOT EXISTS `vw_cube_vbpce_apc_faits` (
 
 CREATE TABLE IF NOT EXISTS `prm_cols_composant` (
   `idRaComp` int PRIMARY KEY,
-  `idObjet` int DEFAULT NULL,
+  `idObjetSrc` int DEFAULT NULL,
+  `idObjetCib` int DEFAULT NULL,
   `idRA` int DEFAULT NULL,
   `idColscib` int DEFAULT NULL,
   `COLS_CODE` varchar(200) DEFAULT NULL,
   `CODE_COMPOSANT` varchar(200) DEFAULT NULL,
   `idColsSrc` int DEFAULT NULL,
   `COLS_CODE_SRC` varchar(200) DEFAULT NULL,
-  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (`idObjetSrc`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (`idObjetSrc`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (`idColscib`) REFERENCES `prm_cols` (`idCol`) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (`idColsSrc`) REFERENCES `prm_cols` (`idCol`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
