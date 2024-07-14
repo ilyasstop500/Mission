@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  yip;
+CREATE DATABASE IF NOT EXISTS  rtx;
 
-USE yip;
+USE rtx;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
