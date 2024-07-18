@@ -1,23 +1,26 @@
 
 
-CREATE DATABASE IF NOT EXISTS  rtx;
+CREATE DATABASE IF NOT EXISTS  5k;
 
-USE rtx;
+USE 5k;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
   `idObjet` int NOT NULL PRIMARY KEY,
-  `TDB` varchar(200) NOT NULL,
-  `PAGE` varchar(200) NOT NULL,
-  `OBJET` varchar(200) NOT NULL,
+  `RAPPR_CODE` varchar(200) NOT NULL,
+  `PAGE_CODE` varchar(200) NOT NULL,
+  `OBJT_CODE` varchar(200) NOT NULL,
+  `OBJT_TYPE` varchar(200) NOT NULL,
+  `OBJT_LIBL` varchar(200) NOT NULL,
   `TITRE_OBJET` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_rows` (
-  `idRows` int PRIMARY KEY,
   `idObjet` int DEFAULT NULL,
+  `idRows` int PRIMARY KEY,
   `ROWS_CODE` varchar(200) DEFAULT NULL,
   `ROWS_NIV` varchar(200) DEFAULT '0',
+  `ROWS_ORDR` varchar(200) DEFAULT '0',
   FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -33,25 +36,31 @@ CREATE TABLE IF NOT EXISTS `prm_cols_calcul` (
 
 
 CREATE TABLE IF NOT EXISTS `prm_cols` (
-  `idCol` int PRIMARY KEY,
   `idObjet` int ,
+  `idCols` int PRIMARY KEY,
   `COLS_CODE` varchar(200) DEFAULT NULL,
+  `COLS_ENTETE1` varchar(200) DEFAULT NULL,
+  `COLS_ENTETE2` varchar(200) DEFAULT NULL,
+  `COLS_ENTETE3` varchar(200) DEFAULT NULL,
+  `COLS_FORMAT` varchar(200) DEFAULT NULL,
+  `COLS_PRM_GRAPHE` varchar(200) DEFAULT NULL,
+  `COLS_LIBL` varchar(200) DEFAULT NULL,
+  `COLS_COEF` varchar(200) DEFAULT NULL,
   `COLS_NATURE` varchar(200) DEFAULT NULL,
+  `COLS_DATAMART` varchar(200) DEFAULT NULL,
   `COLS_FORMULE` varchar(200) ,
-  `COLS_ORDRE` int DEFAULT 0 
-
+  `COLS_ORDRE` int DEFAULT 0 ,
+  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
-  `COLS_NATURE` varchar(10) NOT NULL,
-  `RA_CODE` varchar(10) NOT NULL,
+  `idObjet` int NOT NULL,
   `idCols` int NOT NULL,
   `COLS_CODE` varchar(10) NOT NULL,
-  `COLS_DATAMART` varchar(60) NOT NULL,
   `COLS_FILTRE_DOMAINE` varchar(10) NOT NULL,
+  `DIM_CODE` varchar(10) NOT NULL,
   `DIM_VAL_CODE` varchar(10) NOT NULL,
-  `idObjet` int NOT NULL,
   `FILTRE_TAB` varchar(60) NOT NULL,
   `FILTRE_CHA` varchar(60) NOT NULL,
   `FILTRE_VAL` varchar(60) NOT NULL,
@@ -61,56 +70,40 @@ CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE IF NOT EXISTS `prm_ra_liens` (
-  `idRACible` varchar(200) NOT NULL PRIMARY KEY,
-  `idObjet` int NOT NULL,
-  `idRA` int NOT NULL,
-  `RA_CODE` varchar(10) NOT NULL,
-  `idColsCib` int NOT NULL,
-  `idRowsCib` int NOT NULL,
-  `COLS_CODE` varchar(10) NOT NULL,
-  `ROWS_CODE` varchar(10) NOT NULL,
-  `LIEN_VALIDE` varchar(10) NOT NULL,
-  CONSTRAINT UC_LIEN UNIQUE (`idRACible`),
-  FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
-  FOREIGN KEY (`idColsCib`) REFERENCES `prm_cols` (`idCol`) ON UPDATE CASCADE ON DELETE CASCADE,
-  FOREIGN KEY (`idRowsCib`) REFERENCES `prm_rows` (`idRows`)ON UPDATE CASCADE ON DELETE CASCADE 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 
 
 
 CREATE TABLE IF NOT EXISTS `prm_ref_result` (
-  `idLigne` varchar(200) PRIMARY KEY ,
-  `idObjet` int DEFAULT NULL,
-  `TBD` varchar(200) DEFAULT NULL,
-  `PAGE` varchar(200) DEFAULT NULL,
-  `OBJET` varchar(200) DEFAULT NULL,
+  `idFACTLigne` int ,
+  `idCols` int NOT NULL,
+  `idRows` int NOT NULL,
+  `idObjet` int NOT NULL,
   `DAR_REF` varchar(10) NOT NULL,
   `PERD` varchar(10) DEFAULT NULL,
-  `RA_CODE` varchar(10) DEFAULT NULL,
   `COLS_CODE` varchar(10) DEFAULT NULL,  
   `ROWS_CODE` varchar(10) DEFAULT NULL,
-  `SQL_CODE_SRC` varchar(1000) DEFAULT NULL,
-  `SQL_CODE_FINAL` varchar(1000) DEFAULT NULL,
+  `idSQLLigne` varchar(200) ,
   `PERIMETRE` varchar(10) DEFAULT NULL,
-  `DATE_TRT` varchar(200) DEFAULT NULL,
   `VALEUR` varchar(200) DEFAULT NULL,
-  `FORMULE` varchar(200) DEFAULT NULL,
+  `STATUS` varchar(200) DEFAULT NULL,
   `MSG` varchar(200) DEFAULT 'GOOD',
-  `NIV` varchar(200) DEFAULT '0',
-  CONSTRAINT UC_LIEN UNIQUE (`idLigne`),
+  `LIEN_INVALIDE` varchar(200) DEFAULT 'GOOD',
+  `FORMULE` varchar(200) DEFAULT NULL,
+  `FORMULE_VALORISE` varchar(200) DEFAULT NULL,
+  `FORMULE_REF` varchar(200) DEFAULT NULL,
+  `DATE_TRT` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`idCols`,`idRows`,`idObjet`,`DAR_REF`),
   FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_ref_sql` (
-  `idLigne` varchar(200) PRIMARY KEY,
-  `idObjet` int DEFAULT NULL,
-  `TBD` varchar(200) DEFAULT NULL,
-  `PAGE` varchar(200) DEFAULT NULL,
-  `OBJET` varchar(200) DEFAULT NULL,
-  `DAR_REF` varchar(10) DEFAULT NULL,
+  `idSQLLigne` int ,
+  `idObjet` int NOT NULL,
+  `idCol` int NOT NULL,
+  `idRow` int NOT NULL,
+  `DAR_REF` varchar(10) NOT NULL,
   `PERD` varchar(10) DEFAULT NULL,
-  `RA_CODE` varchar(10) DEFAULT NULL,
   `COLS_CODE` varchar(10) DEFAULT NULL,
   `ROWS_CODE` varchar(10) DEFAULT NULL,
   `SQL_CODE_SRC` varchar(1000) DEFAULT NULL,
@@ -118,14 +111,16 @@ CREATE TABLE IF NOT EXISTS `prm_ref_sql` (
   `PERIMETRE` varchar(10) DEFAULT NULL,
   `DATE_TRT` varchar(200) DEFAULT NULL,
   `NIV` varchar(200) DEFAULT '0',
+  PRIMARY KEY (`idCol`,`idRow`,`idObjet`,`DAR_REF`),
   FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
-  CONSTRAINT UC_LIEN UNIQUE (`idLigne`)
+  CONSTRAINT UC_LIEN UNIQUE (`idSQLLigne`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE IF NOT EXISTS `prm_rows_filtre` (
   `idObjet` int NOT NULL,
   `idRows` int NOT NULL,
   `ROWS_CODE` varchar(10) NOT NULL,
+  `DIM_CODE` varchar(10) NOT NULL,
   `DIM_VAL_CODE` varchar(10) NOT NULL,
   `FILTRE_TAB` varchar(60) NOT NULL,
   `FILTRE_CHA` varchar(60) NOT NULL,
@@ -222,29 +217,15 @@ CREATE TABLE IF NOT EXISTS `vw_cube_vbpce_apc_faits` (
   `NUMR_SEMN` varchar(255) DEFAULT NULL,
   `VALR_INDC` varchar(255) DEFAULT NULL,
   `C_NIV_1` varchar(255) DEFAULT NULL,
-  `L_NIV_1` varchar(255) DEFAULT NULL,
   `C_NIV_2` varchar(255) DEFAULT NULL,
-  `L_NIV_2` varchar(255) DEFAULT NULL,
   `C_NIV_3` varchar(255) DEFAULT NULL,
-  `L_NIV_3` varchar(255) DEFAULT NULL,
   `C_NIV_4` varchar(255) DEFAULT NULL,
-  `L_NIV_4` varchar(255) DEFAULT NULL,
   `C_NIV_41` varchar(255) DEFAULT NULL,
-  `L_NIV_41` varchar(255) DEFAULT NULL,
-  `LIBL_MARC_ICARE` varchar(255) DEFAULT NULL,
   `CODE_GROUPE_SOURCE` varchar(255) DEFAULT NULL,
-  `LIBL_TYPE_SOURCE` varchar(255) DEFAULT NULL,
   `CODE_TYPE_SOURCE` varchar(255) DEFAULT NULL,
-  `LIBL_SOURCE` varchar(255) DEFAULT NULL,
   `CODE_SOURCE` varchar(255) DEFAULT NULL,
-  `LIBL_SOUR_TECH` varchar(255) DEFAULT NULL,
-  `LIBL_INDC` varchar(255) DEFAULT NULL,
-  `CODE_INDC_METIER` varchar(255) DEFAULT NULL,
-  `LIBL_NIV3_APC` varchar(255) DEFAULT NULL,
   `CODE_NIV3_APC` varchar(255) DEFAULT NULL,
-  `LIBL_NIV2_APC` varchar(255) DEFAULT NULL,
-  `CODE_NIV2_APC` varchar(255) DEFAULT NULL,
-  `LIBL_NIV1_APC` varchar(255) DEFAULT NULL
+  `CODE_NIV2_APC` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
@@ -256,7 +237,6 @@ CREATE TABLE IF NOT EXISTS `prm_cols_composant` (
   `idRaComp` int PRIMARY KEY,
   `idObjetSrc` int DEFAULT NULL,
   `idObjetCib` int DEFAULT NULL,
-  `idRA` int DEFAULT NULL,
   `idColscib` int DEFAULT NULL,
   `COLS_CODE` varchar(200) DEFAULT NULL,
   `CODE_COMPOSANT` varchar(200) DEFAULT NULL,
@@ -264,7 +244,33 @@ CREATE TABLE IF NOT EXISTS `prm_cols_composant` (
   `COLS_CODE_SRC` varchar(200) DEFAULT NULL,
   FOREIGN KEY (`idObjetSrc`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
   FOREIGN KEY (`idObjetSrc`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE,
-  FOREIGN KEY (`idColscib`) REFERENCES `prm_cols` (`idCol`) ON UPDATE CASCADE ON DELETE CASCADE,
-  FOREIGN KEY (`idColsSrc`) REFERENCES `prm_cols` (`idCol`) ON UPDATE CASCADE ON DELETE CASCADE
+  FOREIGN KEY (`idColscib`) REFERENCES `prm_cols` (`idCols`) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (`idColsSrc`) REFERENCES `prm_cols` (`idCols`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+
+CREATE TABLE IF NOT EXISTS `prm_lineage` (
+    `idCols` int ,
+    `idRows` int,
+    `Value` int,
+    `Origine` varchar(200) ,
+    `Formule_valo` varchar(200) , 
+    `liste_composants` varchar(200) ,
+    FOREIGN KEY (`idCols`) REFERENCES `prm_cols` (`idCols`) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (`idRows`) REFERENCES `prm_rows` (`idRows`) ON UPDATE CASCADE ON DELETE CASCADE
+
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE IF NOT EXISTS `prm_lineage_final` (
+    `id` int PRIMARY KEY AUTO_INCREMENT,
+    `idCols` int ,
+    `idRows` int,
+    `Value` int,
+    `Origine` varchar(200) ,
+    `Formule_valo` varchar(200) , 
+    `liste_composants` varchar(200) ,
+    FOREIGN KEY (`idCols`) REFERENCES `prm_cols` (`idCols`) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (`idRows`) REFERENCES `prm_rows` (`idRows`) ON UPDATE CASCADE ON DELETE CASCADE
+
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

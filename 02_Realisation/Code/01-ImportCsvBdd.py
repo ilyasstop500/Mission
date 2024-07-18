@@ -52,8 +52,8 @@ def Import_All_Csv(directory):
         "prm_rows",
         "prm_cols",
         "prm_cols_filtre",
-        "prm_ra_liens",
         "prm_rows_filtre",
+        "prm_cols_calcul",
         "prm_cols_composant"
         
 

@@ -34,6 +34,8 @@ def calculate(formula, list_values):
     return eval(result)
 
 
+
+
 def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
     DARREF = dateref
@@ -53,43 +55,36 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
     for order in range (1,max_order+1) :  
 
-        query = (f"SELECT DISTINCT r.idRACible,r.idObjet,r.idRA,r.RA_Code,r.idColsCib,r.idRowsCib,r.COLS_CODE,r.ROWS_CODE,r.LIEN_VALIDE,c.COLS_NATURE FROM PRM_RA_LIENS r JOIN PRM_COLS c ON r.idColsCib = c.idCol WHERE r.LIEN_VALIDE ='OUI\r' AND c.COLS_NATURE = 'CALCUL' AND c.COLS_ORDRE = {order} " )
+        query = ("SELECT  idObjet,idCols,COLS_CODE,COLS_DATAMART FROM PRM_COLS  WHERE COLS_NATURE = 'CALCUL' ")
         cur.execute(query)
-        list_of_links = [] # list_of_links contain the list of (idObjet,idRA,RA_CODE,idColsCib,idRowsCib,COLS_CODE,ROW_CODE,LIEN_VALIDE)
-        for elem in cur : 
-            list_of_links.append(elem)
-            print("link : " , elem)
+        list_of_cols = cur.fetchall()
+         
+        Factid = int(str(Parametres.next_fact_id))
+        for col in list_of_cols : 
+            query = (f"SELECT idObjet,idRows,ROWS_CODE,ROWS_NIV,ROWS_ORDR FROM PRM_ROWS WHERE idObjet = '{col[0]}'")
+            cur.execute(query)
+            list_of_rows = cur.fetchall()
+            print("list_of_rows", list_of_rows)
+            for row in list_of_rows :
 
-        try : 
-        
-            for link in list_of_links : #
-                try : 
-                    idLigne = str(link[0]) + "/" +Parametres.dateref
-                    idObjet = link[1]
-                    RA = link[2]
-                    COLCIB = link[4]
-                    ROWCIB = link[5]
-                    COL = link[6]
-                    ROWCODE = link[7]
+                
+                    Factid = Factid+ 1 
+                    idObjet = col[0]
+                    COLCIB = col[1]
+                    ROWCIB = row[1]
+                    COL = col[2]
+                    ROWCODE = row[2]
                     ROW = ROWCODE
                     DATE_TRT = now = datetime.now()
                     PERIMETRE = "CALCUL"
 
-                    query = (f" SELECT TDB,PAGE,OBJET FROM PRM_TDB_OBJETS WHERE idObjet = {idObjet}")
-                    cur.execute(query)
-                    prop_list = []
-                    for elem in cur :
-                        prop_list.append(elem)
                     
-                    TBD = prop_list[0][0]
-                    PAGE = prop_list[0][1]
-                    OBJET = prop_list[0][2]
+        
 
-                    query = (f" SELECT FILTRE_VAL FROM PRM_COLS_FILTRE WHERE FILTRE_CHA = 'PERD_ARRT_INFO' AND idCols = '{COLCIB}'")
-                    cur.execute(query)
-                    PERD = cur.fetchone()[0]
+    
+                    PERD = "NO"
 
-                    query =(f"SELECT COLS_FORMULE FROM PRM_COLS WHERE idCol = '{COLCIB}' ")
+                    query =(f"SELECT COLS_FORMULE FROM PRM_COLS WHERE idCols = '{COLCIB}' ")
                     cur.execute(query)
                     
                         
@@ -108,80 +103,74 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     TYPE = placeholder[0][2].strip()
 
                     if TYPE == "COLONNE"  : 
-                        try  :
-                            list_composants = list()
-                            query =(f"SELECT  idObjetCib,CODE_COMPOSANT,COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                    
+                        list_composants = list()
+                         
+                        cur.execute(query)
+                        list_composants = cur.fetchall()
+                        #print(list_composants)
+                        #print('next')
+                        placeholder = list()
+                        for composant in list_composants : 
+                            idobjet = composant[0]
+                            CODE_COMPOSANT = composant[1].strip()
+                            COLCODE= composant[2].strip()
+                            placeholder.append([idobjet,CODE_COMPOSANT,COLCODE,ROWCODE])
+                        print(len(placeholder))
+                        list_valeurs = list()
+                        for elem in placeholder : 
+                            query =(f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{elem[0]}' AND  COLS_CODE = '{elem[2]}' AND ROWS_CODE = '{elem[3]}' AND  DAR_REF = '{Parametres.dateref}'")
                             cur.execute(query)
-                            list_composants = cur.fetchall()
-                            #print(list_composants)
-                            #print('next')
-                            placeholder = list()
-                            for composant in list_composants : 
-                                idobjet = composant[0]
-                                CODE_COMPOSANT = composant[1].strip()
-                                COLCODE= composant[2].strip()
-                                placeholder.append([idobjet,CODE_COMPOSANT,COLCODE,ROWCODE])
-                            
-                            list_valeurs = list()
-                            for elem in placeholder : 
-                                query =(f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{elem[0]}' AND  COLS_CODE = '{elem[2]}' AND ROWS_CODE = '{elem[3]}' AND  DAR_REF = '{Parametres.dateref}'")
-                                cur.execute(query)
-                                value = cur.fetchone()[0]
-                                list_valeurs.append([elem[1],value])
-                            
-                            
-                                RESULTAT = calculate(FORMULE,list_valeurs)
-                        except Exception as e :  
-                            logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
-                            continue
+                            print(elem[0],elem[2],elem[3],Parametres.dateref)
+                            value = cur.fetchone()[0]
+                            list_valeurs.append([elem[1],value])
+                            print("LIST VALS ----------------------------------------------" ,len(list_valeurs))
+                            if len(list_valeurs) != len(placeholder) :
+                                 continue
+                            RESULTAT = calculate(FORMULE,list_valeurs)
+                        
 
                         
                 
-                        query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-                        values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FORMULE+FAMILLE,1)
-                    
+                            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                            values = (Factid,COLCIB,ROWCIB,idObjet,DARREF, PERD,COL, ROW," ", PERIMETRE,RESULTAT,"STATUS","WOOOOW","VALIDE",FORMULE,FAMILLE,"",DATE_TRT)
 
-                        # Execute the query with the values
-                        cur.execute(query,values)
-                        # Commit the transaction
-                        cnx.commit()
+                            # Execute the query with the values
+                            cur.execute(query,values)
+                            # Commit the transaction
+                            cnx.commit()
 
-                        # dict containing all value inserted into the db 
-                        mydict = {
-                                "idLigne" : idLigne , 
+                            # dict containing all value inserted into the db 
+                            mydict = {
+                                "idFact" : Factid , 
                                 "idObjet" : idObjet ,
-                                "TBD" : TBD,
-                                "PAGE" : PAGE ,
-                                "OBJET" : OBJET ,
+                                "idCol" : COLCIB,
+                                "idRow" : ROWCIB,
                                 "DAT_REF" : DARREF ,
                                 "PERD" : PERD ,
-                                "RA_CODE" : RA ,
                                 "COLS_CODE" : COL , 
                                 "ROWS_CODE" : ROW,
-                                "SQL_CODE_SRC" : " ", 
-                                "SQL_CODE_FINAL" : " " ,
                                 "PERIMETRE" : PERIMETRE ,
                                 "DATE_TRT" : str(DATE_TRT) , 
                                 "VALEUR" : RESULTAT,
-                                "FORMULE" : FAMILLE ,
-                                "MSG" : "GOOD",
-                                "NIV" : 1
-                            }
-                        
-                        # saving the dict in the log file
-                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
+                                "MSG" : FORMULE
+                                }
+            
+                            
+                            # saving the dict in the log file
+                            logging.debug(f"uploaded into database line '{Factid}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
                             
                         
 
                     elif TYPE == "LIGNE" and FAMILLE == "MAX":
 
-                        try : 
+                 
 
-                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetSrc, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
 
-                            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0 AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_NIV = 0 AND  DAR_REF = '{Parametres.dateref}'")
                             cur.execute(query)
                             placeholder = list(cur.fetchall())
                             list_lignes = list(placeholder)
@@ -198,53 +187,44 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                             print(list_lignes)
                             RESULTAT = temp_list[3]  
 
-                        except Exception as e :  
-                            logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
-                            continue
+                        
 
                     
-                        query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-                        values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FAMILLE,1)
-                    
+                            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                            values = (Factid,COLCIB,ROWCIB,idObjet,DARREF, PERD,COL, ROW," ", PERIMETRE,RESULTAT,"STATUS","WOOOOW","VALIDE",FORMULE,FAMILLE,"",DATE_TRT)
 
-                        # Execute the query with the values
-                        cur.execute(query,values)
-                        # Commit the transaction
-                        cnx.commit()
+                            # Execute the query with the values
+                            cur.execute(query,values)
+                            # Commit the transaction
+                            cnx.commit()
 
-                        # dict containing all value inserted into the db 
-                        mydict = {
-                                "idLigne" : idLigne , 
+                            # dict containing all value inserted into the db 
+                            mydict = {
+                                "idFact" : Factid , 
                                 "idObjet" : idObjet ,
-                                "TBD" : TBD,
-                                "PAGE" : PAGE ,
-                                "OBJET" : OBJET ,
+                                "idCol" : COLCIB,
+                                "idRow" : ROWCIB,
                                 "DAT_REF" : DARREF ,
                                 "PERD" : PERD ,
-                                "RA_CODE" : RA ,
                                 "COLS_CODE" : COL , 
                                 "ROWS_CODE" : ROW,
-                                "SQL_CODE_SRC" : " ", 
-                                "SQL_CODE_FINAL" : " " ,
                                 "PERIMETRE" : PERIMETRE ,
                                 "DATE_TRT" : str(DATE_TRT) , 
                                 "VALEUR" : RESULTAT,
-                                "FORMULE" : FAMILLE ,
-                                "MSG" : "GOOD",
-                                "NIV" : 1
-                            }
-                        
-                        # saving the dict in the log file
-                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
+                                "MSG" : FORMULE
+                                }
+                            
+                            # saving the dict in the log file
+                            logging.debug(f"uploaded into database line '{Factid}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
                     elif TYPE == "LIGNE" and FAMILLE == "MIN":
 
-                        try : 
-                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                       
+                            query = (f"SELECT idObjetSrc, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
 
-                            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0 AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT r.idObjet,r.COLS_CODE,r.ROWS_CODE,r.VALEUR FROM PRM_REF_RESULT r JOIN PRM_COLS c ON r.idCols = c.idCols  WHERE r.idObjet = '{composant[0]}' AND r.COLS_CODE = '{composant[2].strip()}' AND c.ROWS_NIV = 0 AND  r.DAR_REF = '{Parametres.dateref}'")
                             cur.execute(query)
                             placeholder = list(cur.fetchall())
                             list_lignes = list(placeholder)
@@ -261,73 +241,58 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                             print(list_lignes)
                             RESULTAT = temp_list[3]
 
-                        except Exception as e :  
-                            logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
-                            continue
+                        
 
-                        query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-                        values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FAMILLE,1)
-                    
+                            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                            values = (Factid,COLCIB,ROWCIB,idObjet,DARREF, PERD,COL, ROW," ", PERIMETRE,RESULTAT,"STATUS","WOOOOW","VALIDE",FORMULE,FAMILLE,"",DATE_TRT)
 
-                        # Execute the query with the values
-                        cur.execute(query,values)
-                        # Commit the transaction
-                        cnx.commit()
+                            # Execute the query with the values
+                            cur.execute(query,values)
+                            # Commit the transaction
+                            cnx.commit()
 
-                        # dict containing all value inserted into the db 
-                        mydict = {
-                                "idLigne" : idLigne , 
+                            # dict containing all value inserted into the db 
+                            mydict = {
+                                "idFact" : Factid , 
                                 "idObjet" : idObjet ,
-                                "TBD" : TBD,
-                                "PAGE" : PAGE ,
-                                "OBJET" : OBJET ,
+                                "idCol" : COLCIB,
+                                "idRow" : ROWCIB,
                                 "DAT_REF" : DARREF ,
                                 "PERD" : PERD ,
-                                "RA_CODE" : RA ,
                                 "COLS_CODE" : COL , 
                                 "ROWS_CODE" : ROW,
-                                "SQL_CODE_SRC" : " ", 
-                                "SQL_CODE_FINAL" : " " ,
                                 "PERIMETRE" : PERIMETRE ,
                                 "DATE_TRT" : str(DATE_TRT) , 
                                 "VALEUR" : RESULTAT,
-                                "FORMULE" : FAMILLE ,
-                                "MSG" : "GOOD",
-                                "NIV" : 1
-                            }
-                        
-                        # saving the dict in the log file
-                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
+                                "MSG" : FORMULE
+                                }
+                            # saving the dict in the log file
+                            logging.debug(f"uploaded into database line '{Factid}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
                     
 
 
                     elif TYPE == "LIGNE" and FAMILLE == "RANG":
 
-                        try : 
+                        
 
-                            # Fetch NIV for the given ROWCODE
-                            query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT ROWS_NIV FROM PRM_ROWS WHERE idRows = {ROWCIB}")
                             cur.execute(query)
-                            test = cur.fetchone()
-                            
-                            if test:
-                                test = test[0]
-                                print('test', test)
-                            else:
-                                raise ValueError("No result found for the given idObjet, COLS_CODE, and ROWS_CODE")
+                            test = cur.fetchone()[0]
 
                             if int(test) == 1:
                                 poids = 1
                                 continue
 
+                            
+
                             # Query to get composant details
-                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetSrc, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
 
                             # Query to get list of lines
-                            query = (f"SELECT idObjet, COLS_CODE, ROWS_CODE, VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 0 AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT a.idObjet, a.COLS_CODE, a.ROWS_CODE, a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idObjet = '{composant[0]}' AND a.COLS_CODE = '{composant[2].strip()}' AND b.ROWS_NIV = 0 AND  a.DAR_REF = '{Parametres.dateref}'")
                             cur.execute(query)
                             list_lignes = list(cur.fetchall())
 
@@ -348,44 +313,34 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                                 if list_lignes[i][2] == ROW :    
                                     testo = list_lignes[i][3]  # Ensure RESULTAT is correctly set for each line
 
-                        except Exception as e :  
-                            logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
-                            continue
+                        
 
-                        query = ("REPLACE INTO prm_ref_result "
-                                "(idLigne, idObjet, TBD, PAGE, OBJET, DAR_REF, PERD, RA_CODE, COLS_CODE, ROWS_CODE, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT, VALEUR, FORMULE, NIV) "
-                                "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s , %s, %s)")
-                        values = (idLigne, idObjet, TBD, PAGE, OBJET, DARREF, PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT, testo, FAMILLE , 1)
+                            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                            values = (Factid,COLCIB,ROWCIB,idObjet,DARREF, PERD,COL, ROW," ", PERIMETRE,RESULTAT,"STATUS","WOOOOW","VALIDE",FORMULE,FAMILLE,"",DATE_TRT)
 
-                        # Execute the query with the values
-                        cur.execute(query, values)
-                        # Commit the transaction
-                        cnx.commit()
+                            # Execute the query with the values
+                            cur.execute(query,values)
+                            # Commit the transaction
+                            cnx.commit()
 
-                        # dict containing all value inserted into the db 
-                        mydict = {
-                                "idLigne" : idLigne , 
+                            # dict containing all value inserted into the db 
+                            mydict = {
+                                "idFact" : Factid , 
                                 "idObjet" : idObjet ,
-                                "TBD" : TBD,
-                                "PAGE" : PAGE ,
-                                "OBJET" : OBJET ,
+                                "idCol" : COLCIB,
+                                "idRow" : ROWCIB,
                                 "DAT_REF" : DARREF ,
                                 "PERD" : PERD ,
-                                "RA_CODE" : RA ,
                                 "COLS_CODE" : COL , 
                                 "ROWS_CODE" : ROW,
-                                "SQL_CODE_SRC" : " ", 
-                                "SQL_CODE_FINAL" : " " ,
                                 "PERIMETRE" : PERIMETRE ,
                                 "DATE_TRT" : str(DATE_TRT) , 
                                 "VALEUR" : RESULTAT,
-                                "FORMULE" : FAMILLE ,
-                                "MSG" : "GOOD",
-                                "NIV" : 1
-                            }
-                        
-                        # saving the dict in the log file
-                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
+                                "MSG" : FORMULE
+                                }
+                            
+                            # saving the dict in the log file
+                            logging.debug(f"uploaded into database line '{Factid}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
 
 
@@ -396,25 +351,18 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
                         
                     elif TYPE == "LIGNE" and FAMILLE == "POIDS":
-                        try : 
+                       
 
-                            # Fetch NIV for the given ROWCODE
-                            query = (f"SELECT NIV FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT ROWS_NIV FROM PRM_ROWS WHERE idRows = {ROWCIB}")
                             cur.execute(query)
-                            test = cur.fetchone()
-                            
-                            if test:
-                                test = test[0]
-                                print('test', test)
-                            else:
-                                raise ValueError("No result found for the given idObjet, COLS_CODE, and ROWS_CODE")
+                            test = cur.fetchone()[0]
 
                             if int(test) == 1:
                                 poids = 1
                                 continue
 
                             # Fetch composant details
-                            query = (f"SELECT idObjetCib, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
+                            query = (f"SELECT idObjetSrc, CODE_COMPOSANT, COLS_CODE_SRC FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{COLCIB}'")
                             cur.execute(query)
                             composant = cur.fetchall()[0]
                             
@@ -422,7 +370,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                                 raise ValueError("No composant found for the given idColsCib")
 
                             # Fetch the numerator (NIV = 0)
-                            query = (f"SELECT VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND ROWS_CODE = '{ROWCODE}' AND NIV = 0 AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idObjet = '{composant[0]}' AND a.COLS_CODE = '{composant[2].strip()}' AND a.ROWS_CODE = '{ROWCODE}' AND b.ROWS_NIV = 0 AND  a.DAR_REF = '{Parametres.dateref}'")
                             cur.execute(query)
                             numerateur = cur.fetchone()
                             
@@ -430,10 +378,11 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                                 numerateur = numerateur[0]
                                 print("niv 0", numerateur)
                             else:
+                                print( "COMPOSANTS : ",composant[0],composant[2].strip() ,Parametres.dateref,ROWCODE)
                                 raise ValueError("No result found for the numerator query")
 
                             # Fetch the denominator (NIV = 1)
-                            query = (f"SELECT VALEUR FROM PRM_REF_RESULT WHERE idObjet = '{composant[0]}' AND COLS_CODE = '{composant[2].strip()}' AND NIV = 1 AND  DAR_REF = '{Parametres.dateref}'")
+                            query = (f"SELECT a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idObjet = '{composant[0]}' AND a.COLS_CODE = '{composant[2].strip()}' AND b.ROWS_NIV = 1 AND  a.DAR_REF = '{Parametres.dateref}'")
                             cur.execute(query)
                             denumerateur = cur.fetchone()
                             
@@ -441,7 +390,9 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                                 denumerateur = denumerateur[0]
                                 print("niv 1", denumerateur)
                             else:
-                                raise ValueError("No result found for the denominator query")
+                                print( "COMPOSANTS : ",composant[0],composant[2].strip() ,Parametres.dateref)
+                                
+                                
 
                             # Calculate the weight (poids)
                             try:
@@ -454,54 +405,38 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                             
                             RESULTAT = poids
 
-                        except Exception as e :  
-                            logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
-                            continue
-                        
-                        query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-                        values = (idLigne, idObjet, TBD, PAGE,OBJET,DARREF,PERD, RA, COL, ROW, "", "", PERIMETRE, DATE_TRT,RESULTAT,FAMILLE,1)
-                    
+                       
+                            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                            values = (Factid,COLCIB,ROWCIB,idObjet,DARREF, PERD,COL, ROW," ", PERIMETRE,RESULTAT,"STATUS","WOOOOW","VALIDE",FORMULE,FAMILLE,"",DATE_TRT)
 
-                        # Execute the query with the values
-                        cur.execute(query,values)
-                        # Commit the transaction
-                        cnx.commit()
+                            # Execute the query with the values
+                            cur.execute(query,values)
+                            # Commit the transaction
+                            cnx.commit()
 
-                        # dict containing all value inserted into the db 
-                        mydict = {
-                                "idLigne" : idLigne , 
+                            # dict containing all value inserted into the db 
+                            mydict = {
+                                "idFact" : Factid , 
                                 "idObjet" : idObjet ,
-                                "TBD" : TBD,
-                                "PAGE" : PAGE ,
-                                "OBJET" : OBJET ,
+                                "idCol" : COLCIB,
+                                "idRow" : ROWCIB,
                                 "DAT_REF" : DARREF ,
                                 "PERD" : PERD ,
-                                "RA_CODE" : RA ,
                                 "COLS_CODE" : COL , 
                                 "ROWS_CODE" : ROW,
-                                "SQL_CODE_SRC" : " ", 
-                                "SQL_CODE_FINAL" : " " ,
                                 "PERIMETRE" : PERIMETRE ,
                                 "DATE_TRT" : str(DATE_TRT) , 
                                 "VALEUR" : RESULTAT,
-                                "FORMULE" : FAMILLE ,
-                                "MSG" : "GOOD",
-                                "NIV" : 1
-                            }
-                        
-                        # saving the dict in the log file
-                        logging.debug(f"uploaded into database line '{idLigne}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
+                                "MSG" : FORMULE
+                                }
+                            # saving the dict in the log file
+                            logging.debug(f"uploaded into database line '{Factid}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
 
-                            
+                                    
 
-                except Exception as e :  
-                    logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
-                    continue
+                    
 
-                
-
-        except Exception as e :  
-                    logging.error(f"Can not calculate value for line with id '{idLigne}'"+str(e))
+        
                 
             
 

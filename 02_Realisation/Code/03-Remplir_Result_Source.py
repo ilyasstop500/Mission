@@ -1,6 +1,6 @@
 from ConDB import con_to_db
 import Parametres
-
+from CsvRead import modify_specific_lines
 
 import logging
 import json
@@ -19,6 +19,8 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
 
     try : 
 
+        
+
         logging.debug(f"populating '{schema}' schema's resultsql source  with dateref '{dateref}'")
         
         cnx = con_to_db(user,pwd,ip,schema) #con to db 
@@ -28,29 +30,30 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
         cur.execute(query)
         for elem in cur :
             print (elem)
+        
+        
 
         # getting all line for the refsql table
         list_of_refsql = list()
         query = "SELECT * FROM prm_ref_sql"
         cur.execute(query)
         list_of_refsql = cur.fetchall()
+        idFact = Parametres.next_fact_id
+        for refsql in list_of_refsql :  
 
-        for refsql in list_of_refsql : 
-            idLigne = refsql[0]
+            idSQLLigne = refsql[0]
             idObjet = refsql[1]
-            TBD = refsql[2]
-            PAGE = refsql[3]
-            OBJET = refsql[4]
-            TEMPS = refsql[5]
-            PERD = refsql[6]
-            RA = refsql[7]
-            COL = refsql [8]
-            ROW = refsql[9]
-            SQL_CODE_SRC = refsql[10]
-            SQL_CODE_FINAL = refsql[11]
-            PERIMETRE = refsql[12]
-            DATE_TRT = refsql[13]
-            NIV = refsql[14]
+            idCol = refsql[2]
+            idRow = refsql[3]
+            TEMPS = refsql[4]
+            PERD = refsql[5]
+            COL = refsql [6]
+            ROW = refsql[7]
+            SQL_CODE_SRC = refsql[8]
+            SQL_CODE_FINAL = refsql[9]
+            PERIMETRE = refsql[10]
+            DATE_TRT = refsql[11]
+            NIV = refsql[12]
             try : 
                 cur.execute(SQL_CODE_FINAL)
                 results = cur.fetchall()
@@ -66,32 +69,36 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
             # exception in the case of an error that will send the "ERROR" msg 
 
             except Exception as e : 
-                logging.error(f"Can not execute refsql SQL CODE and get Calculate Value for line with id '{idLigne}'"+str(e))
-                query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,FORMULE,NIV,MSG)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s)")
-                values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,"PAS DE FORMULE - CALCUL SOURCE",NIV,"ERROR")
+                logging.error(f"Can not execute refsql SQL CODE and get Calculate Value for line with id '{idSQLLigne}'"+str(e))
+                query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s)")
+                values = (idFact,idCol,idRow,idObjet,TEMPS, PERD,COL, ROW,idSQLLigne, PERIMETRE,"STATUS","ERROR","VALIDE","","","",DATE_TRT)
                 cur.execute(query,values)
-            query =("REPLACE INTO prm_ref_result ""(idLigne, idObjet, TBD, PAGE,OBJET,DAR_REF,PERD,RA_CODE,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,VALEUR,FORMULE,NIV,MSG)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s)")
-            values = (idLigne, idObjet, TBD, PAGE,OBJET,TEMPS, PERD, RA, COL, ROW, SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,VALEUR,"PAS DE FORMULE - CALCUL SOURCE",NIV,MSG)
+            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+            values = (idFact,idCol,idRow,idObjet,TEMPS, PERD,COL, ROW,idSQLLigne, PERIMETRE,VALEUR,"STATUS","WOOOOW","VALIDE","","","",DATE_TRT)
             
+             
+            modify_specific_lines(r"C:\Users\ILYASS\Desktop\Stage\Mission\02_Realisation\Code\Parametres.py", 8 ,f"next_fact_id = {idFact}")
+            idFact = idFact + 1
             
             # Execute the query with the values
             cur.execute(query,values)
+
+            query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+            values = (idCol,idRow,VALEUR,"SOURCE","","")
+            cur.execute(query,values)
             # Commit the transaction
             cnx.commit()
+            
             # dict containing all value inserted into the db 
             mydict = {
-                    "idLigne" : idLigne , 
+                    "idFact" : idFact , 
                     "idObjet" : idObjet ,
-                    "TBD" : TBD,
-                    "PAGE" : PAGE ,
-                    "OBJET" : OBJET ,
+                    "idCol" : idCol,
+                    "idRow" : idRow,
                     "DAT_REF" : str(TEMPS) ,
                     "PERD" : PERD ,
-                    "RA_CODE" : RA ,
                     "COLS_CODE" : COL , 
                     "ROWS_CODE" : ROW,
-                    "SQL_CODE_SRC" : SQL_CODE_SRC ,
-                    "SQL_CODE_FINAL" : SQL_CODE_FINAL , 
                     "PERIMETRE" : PERIMETRE ,
                     "DATE_TRT" : str(DATE_TRT) , 
                     "VALEUR" : VALEUR,
@@ -100,10 +107,12 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
                 }
             
             # saving the dict in the log file
-            logging.debug(f"uploaded into database line '{idLigne}' with value '{VALEUR}' '{json.dumps(mydict, indent=4)}'")
+            logging.debug(f"uploaded into database line '{idFact}' with value '{VALEUR}' '{json.dumps(mydict, indent=4)}'")
 
+    
     except Exception as e:
-                logging.error(f"Can not upload result source for line with id '{idLigne}' and value '{VALEUR}'"+str(e))
+        
+                logging.error(f"Can not upload result source for line with id and value " + str(e))
 
 
 
