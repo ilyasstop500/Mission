@@ -1,7 +1,7 @@
 ############################################################################################################
-# Module P1 : Calcul SQL
+# Module 4 : Calcul des colonnes composées
 # Auteur : Ilyass
-# date : Mai 2025 
+# dernier Maj : 07/08/2024 
 ############################################################################################################
 
 
@@ -44,9 +44,9 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
     DARREF = dateref
     
+    
+
     # Connexion a la bdd
-
-
     cnx = con_to_db(user,pwd,ip,schema) #con to db 
 
     cur = cnx.cursor()
@@ -96,7 +96,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                 FAMILLE = formule_info[0][1]
                 TYPE = formule_info[0][2].strip()    
 
-#FORMULE GENERALE TYPE COLONNE ---------------------------------------------------------------------------------------------------------------
+                #-------------------------------------------------------------------------------FORMULE GENERALE TYPE COLONNE ---------------------------------------------------------------------------------------------------------------
 
                 if TYPE == "COLONNE"  : 
 
@@ -109,8 +109,9 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     print(type(list_composants))
                     FORMULE_REF = str(list_composants)
                     list_valeurs = list()
+                    # getting values of each components then putting them in a list
                     for composant in list_composants : 
-                        query =(f"SELECT  VALEUR FROM PRM_REF_RESULT WHERE idCols = '{composant[1]}' AND DAR_REF = '{Parametres.dateref}'")
+                        query =(f"SELECT  VALEUR FROM dmrc_fact WHERE idCols = '{composant[1]}' AND DAR_REF = '{Parametres.dateref}'")
                         cur.execute(query)
                         rows_values = list()
                         for elem in cur : 
@@ -124,19 +125,23 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                             AN = rows_values[idRow-4]
                         list_valeurs.append((composant[0],AN))
                     print(list_valeurs)
+                    
+                    #calling the calculate function
+                    
                     RESULTAT = calculate(FORMULE,list_valeurs)[0]
                     MSG = calculate(FORMULE,list_valeurs)[1]
                     STATUS = calculate(FORMULE,list_valeurs)[2]
                     FORMULE_VALO = calculate(FORMULE,list_valeurs)[3]
                     print("RESULTAT" , RESULTAT)
 
-                    query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                    # uploading the result into the DMRC_FACT table
+                    query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
                     values = (Factid,idColscib,idRow,idObjet,DARREF, PERD,ColCode,RowCOde," ", "CALCUL",RESULTAT,STATUS,MSG,"VALIDE",FAMILLE,FORMULE_VALO,FORMULE_REF,TimeTRT)
 
                     # Execute the query with the values
                     cur.execute(query,values)
 
-                    query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+                    query = (f"INSERT INTO dmrc_lineage ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
                     values = (idColscib,idRow,RESULTAT,"CALCUL",FORMULE_VALO,FORMULE_REF)
                     cur.execute(query,values)
 
@@ -163,34 +168,43 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     
                     # saving the dict in the log file
                     logging.debug(f"uploaded into database line '{Factid}' with value '{RESULTAT}' '{json.dumps(mydict, indent=4)}'")
-
+                    
+                    
+                    
+                # ----------------------------------------------------------------------- MAX -------------------------------------------------------------------------------------------------------------------------------------------
                 elif TYPE == "LIGNE" and FAMILLE == "MAX":
 
                     query = (f"SELECT ROWS_NIV FROM PRM_ROWS WHERE idRows = {idRow}")
                     cur.execute(query)
                     test = cur.fetchone()[0]
 
+                    #testing if the niv of the row is not 1 
                     if int(test) == 1:
                         poids = 1
                         continue
-
+                    
+                    
+                    #getting the source column
                     query =(f"SELECT  idColsSrc FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{idColscib}'")
                     cur.execute(query)
                     composant = cur.fetchone()[0]
 
-                    query =(f"SELECT  a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0'")
+                    #fetching all the values of the source column and putting them in a list
+                    query =(f"SELECT  a.VALEUR FROM dmrc_fact a JOIN PRM_ROWS b ON a.idRows = b.idRows WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0'")
                     cur.execute(query)
                     list_valeurs = list()
                     for elem in cur : 
                         list_valeurs.append(elem[0])
+                        
+                    #max
                     RESULTAT = max(list_valeurs)
 
-                    query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                    query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
                     values = (Factid,idColscib,idRow,idObjet,DARREF, PERD,ColCode,RowCOde," ", "CALCUL",RESULTAT,"STATUS","WOOOOW","VALIDE",FAMILLE,FORMULE,"",TimeTRT)
 
 
 
-                    query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+                    query = (f"INSERT INTO dmrc_lineage ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
                     values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,FORMULE_REF)
                     cur.execute(query,values)
 
@@ -215,36 +229,40 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         "VALEUR" : RESULTAT,
                         "MSG" : FORMULE
                         }
-                    
+                # ----------------------------------------------------------------------- MIN -------------------------------------------------------------------------------------------------------------------------------------------   
                 elif TYPE == "LIGNE" and FAMILLE == "MIN":
 
 
                     query = (f"SELECT ROWS_NIV FROM PRM_ROWS WHERE idRows = {idRow}")
                     cur.execute(query)
                     test = cur.fetchone()[0]
-
+                    
+                    #testing if the niv of the row is not 1
                     if int(test) == 1:
                         poids = 1
                         continue
-
+                    
+                    #getting the source column
                     query =(f"SELECT  idColsSrc FROM PRM_COLS_COMPOSANT WHERE idColsCib = '{idColscib}'")
                     cur.execute(query)
                     composant = cur.fetchone()[0]
-
-                    query =(f"SELECT  a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0'")
+                    
+                    #fetching all the values of the source column and putting them in a list
+                    query =(f"SELECT  a.VALEUR FROM dmrc_fact a JOIN PRM_ROWS b ON a.idRows = b.idRows WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0'")
                     cur.execute(query)
                     list_valeurs = list()
                     for elem in cur : 
                         list_valeurs.append(elem[0])
+                    #min
                     RESULTAT = max(list_valeurs)
 
-                    query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                    query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
                     values = (Factid,idColscib,idRow,idObjet,DARREF, PERD,ColCode,RowCOde," ", "CALCUL",RESULTAT,"STATUS","WOOOOW","VALIDE",FAMILLE,FORMULE,"",TimeTRT)
 
                     # Execute the query with the values
                     cur.execute(query,values)
 
-                    query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+                    query = (f"INSERT INTO dmrc_lineage ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
                     values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,FORMULE_REF)
                     cur.execute(query,values)
 
@@ -266,7 +284,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         "VALEUR" : RESULTAT,
                         "MSG" : FORMULE
                         }
-                    
+                # ----------------------------------------------------------------------- RANG-------------------------------------------------------------------------------------------------------------------------------------------   
                 elif TYPE == "LIGNE" and FAMILLE == 'RANG':
 
                     query = (f"SELECT ROWS_NIV FROM PRM_ROWS WHERE idRows = {idRow}")
@@ -281,7 +299,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     cur.execute(query)
                     composant = cur.fetchone()[0]
 
-                    query =(f"SELECT  a.VALEUR,a.idRows FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0'")
+                    query =(f"SELECT  a.VALEUR,a.idRows FROM dmrc_fact a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0'")
                     cur.execute(query)
                     list_valeurs = list()
                     for elem in cur : 
@@ -292,13 +310,13 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         if list_valeurs[i][0] == idColscib and list_valeurs[i][1] == idRow :
                             RESULTAT = i+1
                     
-                    query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                    query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
                     values = (Factid,idColscib,idRow,idObjet,DARREF, PERD,ColCode,RowCOde," ", "CALCUL",RESULTAT,"STATUS","WOOOOW","VALIDE",FAMILLE,FORMULE,"",TimeTRT)
 
                     # Execute the query with the values
                     cur.execute(query,values)
 
-                    query = (f"REPLACE INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+                    query = (f"REPLACE INTO dmrc_lineage ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
                     values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,composant)
                     cur.execute(query,values)
 
@@ -320,7 +338,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                         "VALEUR" : RESULTAT,
                         "MSG" : FORMULE
                         }
-                    
+                # ----------------------------------------------------------------------- POIDS -------------------------------------------------------------------------------------------------------------------------------------------    
                 elif TYPE == "LIGNE" and FAMILLE == 'POIDS':
 
                     query = (f"SELECT ROWS_NIV FROM PRM_ROWS WHERE idRows = {idRow}")
@@ -340,12 +358,12 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     else : 
                         idRow2 = idRow - 4
 
-                    query =(f"SELECT  a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0' AND a.idRows = '{idRow2}'")
+                    query =(f"SELECT  a.VALEUR FROM dmrc_fact a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '0' AND a.idRows = '{idRow2}'")
                     cur.execute(query)
                     numerateur = cur.fetchone()[0]
 
 
-                    query =(f"SELECT  a.VALEUR FROM PRM_REF_RESULT a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '1' ")
+                    query =(f"SELECT  a.VALEUR FROM dmrc_fact a JOIN PRM_ROWS b ON a.idRows = b.idRows  WHERE a.idCols = '{composant}' AND a.DAR_REF = '{Parametres.dateref}' AND b.ROWS_NIV = '1' ")
                     cur.execute(query)
                     denominateur = cur.fetchone()[0]
 
@@ -361,13 +379,13 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     
                     RESULTAT = poids
 
-                    query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                    query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
                     values = (Factid,idColscib,idRow,idObjet,DARREF, PERD,ColCode,RowCOde," ", "CALCUL",RESULTAT,"STATUS","WOOOOW","VALIDE",FAMILLE,FORMULE,"",TimeTRT)
 
                     # Execute the query with the values
                     cur.execute(query,values)
 
-                    query = (f"REPLACE INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+                    query = (f"REPLACE INTO dmrc_lineage ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
                     values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,composant)
                     cur.execute(query,values)
 

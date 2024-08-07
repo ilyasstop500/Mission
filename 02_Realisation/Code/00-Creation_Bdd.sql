@@ -1,8 +1,8 @@
 
 
-CREATE DATABASE IF NOT EXISTS  5k;
+CREATE DATABASE IF NOT EXISTS  6k;
 
-USE 5k;
+USE 6k;
 
 
 CREATE TABLE IF NOT EXISTS `prm_tdb_objets` (
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `prm_cols_filtre` (
 
 
 
-CREATE TABLE IF NOT EXISTS `prm_ref_result` (
+CREATE TABLE IF NOT EXISTS `dmrc_fact` (
   `idFACTLigne` int ,
   `idCols` int NOT NULL,
   `idRows` int NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `prm_ref_result` (
   FOREIGN KEY (`idObjet`) REFERENCES `prm_tdb_objets` (`idObjet`) ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE IF NOT EXISTS `prm_ref_sql` (
+CREATE TABLE IF NOT EXISTS `dmrc_ref_sql` (
   `idSQLLigne` int ,
   `idObjet` int NOT NULL,
   `idCol` int NOT NULL,
@@ -249,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `prm_cols_composant` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE IF NOT EXISTS `prm_lineage` (
+CREATE TABLE IF NOT EXISTS `dmrc_lineage` (
     `idCols` int ,
     `idRows` int,
     `Value` int,
@@ -262,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `prm_lineage` (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-CREATE TABLE IF NOT EXISTS `prm_lineage_final` (
+CREATE TABLE IF NOT EXISTS `dmrc_lineage_final` (
     `id` int PRIMARY KEY AUTO_INCREMENT,
     `idCols` int ,
     `idRows` int,

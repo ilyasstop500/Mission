@@ -47296,3 +47296,2691 @@
     "VALEUR": 100,
     "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
 }'
+2024-08-07 19:35:41 DEBUG uploaded into database line '100' with value '106830.0' '{
+    "idFact": 100,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.495016",
+    "VALEUR": 106830.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '101' with value '86256.0' '{
+    "idFact": 101,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.498438",
+    "VALEUR": 86256.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '102' with value '-10057.0' '{
+    "idFact": 102,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.500446",
+    "VALEUR": -10057.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '103' with value '183029.0' '{
+    "idFact": 103,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.503572",
+    "VALEUR": 183029.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '104' with value '68.39308578745198' '{
+    "idFact": 104,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.506768",
+    "VALEUR": 68.39308578745198,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '105' with value '30.489925768822907' '{
+    "idFact": 105,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.509987",
+    "VALEUR": 30.489925768822907,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '106' with value '-4.418717047451669' '{
+    "idFact": 106,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.513749",
+    "VALEUR": -4.418717047451669,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '107' with value '27.452977351132443' '{
+    "idFact": 107,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.515954",
+    "VALEUR": 27.452977351132443,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '112' with value '0.0' '{
+    "idFact": 112,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.525773",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '113' with value '0.0' '{
+    "idFact": 113,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.529054",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '114' with value '0.0' '{
+    "idFact": 114,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.530168",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '115' with value '0' '{
+    "idFact": 115,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.534009",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '120' with value '160449.0' '{
+    "idFact": 120,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.544716",
+    "VALEUR": 160449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '121' with value '-4538.0' '{
+    "idFact": 121,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.546722",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '122' with value '-8901.0' '{
+    "idFact": 122,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.548728",
+    "VALEUR": -8901.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '123' with value '147010.0' '{
+    "idFact": 123,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.552459",
+    "VALEUR": 147010.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '124' with value '102.7202304737516' '{
+    "idFact": 124,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.554602",
+    "VALEUR": 102.7202304737516,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '125' with value '-1.6041003888299752' '{
+    "idFact": 125,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.557612",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '126' with value '-3.9108084358523727' '{
+    "idFact": 126,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.560621",
+    "VALEUR": -3.9108084358523727,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '127' with value '22.050397480125994' '{
+    "idFact": 127,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.563133",
+    "VALEUR": 22.050397480125994,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '132' with value '0.0' '{
+    "idFact": 132,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.572880",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '133' with value '0.0' '{
+    "idFact": 133,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.575976",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '134' with value '0.0' '{
+    "idFact": 134,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.577998",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '135' with value '0' '{
+    "idFact": 135,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.580310",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '140' with value '20449.0' '{
+    "idFact": 140,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.592702",
+    "VALEUR": 20449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '141' with value '-4538.0' '{
+    "idFact": 141,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.595742",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '142' with value '-8931.0' '{
+    "idFact": 142,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.597640",
+    "VALEUR": -8931.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '143' with value '6980.0' '{
+    "idFact": 143,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.601037",
+    "VALEUR": 6980.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '144' with value '13.091549295774648' '{
+    "idFact": 144,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.603665",
+    "VALEUR": 13.091549295774648,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '145' with value '-1.6041003888299752' '{
+    "idFact": 145,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.605673",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '146' with value '-3.9239894551845342' '{
+    "idFact": 146,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.608683",
+    "VALEUR": -3.9239894551845342,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '147' with value '1.046947652617369' '{
+    "idFact": 147,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.611712",
+    "VALEUR": 1.046947652617369,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '152' with value '0.0' '{
+    "idFact": 152,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.621626",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '153' with value '0.0' '{
+    "idFact": 153,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.624945",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '154' with value '0.0' '{
+    "idFact": 154,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.627017",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '155' with value '0' '{
+    "idFact": 155,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.630362",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '160' with value '110449.0' '{
+    "idFact": 160,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.640360",
+    "VALEUR": 110449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '161' with value '-4538.0' '{
+    "idFact": 161,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.646449",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '162' with value '-8911.0' '{
+    "idFact": 162,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.650510",
+    "VALEUR": -8911.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '163' with value '97000.0' '{
+    "idFact": 163,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.652569",
+    "VALEUR": 97000.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '164' with value '70.70998719590268' '{
+    "idFact": 164,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.656286",
+    "VALEUR": 70.70998719590268,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '165' with value '-1.6041003888299752' '{
+    "idFact": 165,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.659373",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '166' with value '-3.915202108963093' '{
+    "idFact": 166,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.662394",
+    "VALEUR": -3.915202108963093,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '167' with value '14.54927253637318' '{
+    "idFact": 167,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.664951",
+    "VALEUR": 14.54927253637318,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '172' with value '0.0' '{
+    "idFact": 172,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.675229",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '173' with value '0.0' '{
+    "idFact": 173,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.678182",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '174' with value '0.0' '{
+    "idFact": 174,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.681720",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '175' with value '0' '{
+    "idFact": 175,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.684050",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '180' with value '60449.0' '{
+    "idFact": 180,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.695016",
+    "VALEUR": 60449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '181' with value '-4538.0' '{
+    "idFact": 181,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.697272",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '182' with value '-8921.0' '{
+    "idFact": 182,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.700188",
+    "VALEUR": -8921.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '183' with value '46990.0' '{
+    "idFact": 183,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.702538",
+    "VALEUR": 46990.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '184' with value '38.69974391805378' '{
+    "idFact": 184,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.705784",
+    "VALEUR": 38.69974391805378,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '185' with value '-1.6041003888299752' '{
+    "idFact": 185,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.708791",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '186' with value '-3.919595782073814' '{
+    "idFact": 186,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.711799",
+    "VALEUR": -3.919595782073814,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '187' with value '7.048147592620369' '{
+    "idFact": 187,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.714589",
+    "VALEUR": 7.048147592620369,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '192' with value '0.0' '{
+    "idFact": 192,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.724468",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '193' with value '0.0' '{
+    "idFact": 193,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.727480",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '194' with value '0.0' '{
+    "idFact": 194,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.729484",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '195' with value '0' '{
+    "idFact": 195,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.731505",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '196' with value '95' '{
+    "idFact": 196,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.734931",
+    "VALEUR": 95,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '197' with value '90' '{
+    "idFact": 197,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.738149",
+    "VALEUR": 90,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '198' with value '85' '{
+    "idFact": 198,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.742720",
+    "VALEUR": 85,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:35:41 DEBUG uploaded into database line '199' with value '100' '{
+    "idFact": 199,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:35:41.745886",
+    "VALEUR": 100,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '195' with value '106830.0' '{
+    "idFact": 195,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.492026",
+    "VALEUR": 106830.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '196' with value '86256.0' '{
+    "idFact": 196,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.495464",
+    "VALEUR": 86256.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '197' with value '-10057.0' '{
+    "idFact": 197,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.497510",
+    "VALEUR": -10057.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '198' with value '183029.0' '{
+    "idFact": 198,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.500206",
+    "VALEUR": 183029.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '199' with value '68.39308578745198' '{
+    "idFact": 199,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.502747",
+    "VALEUR": 68.39308578745198,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '200' with value '30.489925768822907' '{
+    "idFact": 200,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.506226",
+    "VALEUR": 30.489925768822907,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '201' with value '-4.418717047451669' '{
+    "idFact": 201,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.508413",
+    "VALEUR": -4.418717047451669,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '202' with value '27.452977351132443' '{
+    "idFact": 202,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.511707",
+    "VALEUR": 27.452977351132443,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '207' with value '0.0' '{
+    "idFact": 207,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.522960",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '208' with value '0.0' '{
+    "idFact": 208,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.526111",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '209' with value '0.0' '{
+    "idFact": 209,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.528184",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '210' with value '0' '{
+    "idFact": 210,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.530573",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '215' with value '160449.0' '{
+    "idFact": 215,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.542614",
+    "VALEUR": 160449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '216' with value '-4538.0' '{
+    "idFact": 216,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.544645",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '217' with value '-8901.0' '{
+    "idFact": 217,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.546649",
+    "VALEUR": -8901.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '218' with value '147010.0' '{
+    "idFact": 218,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.549081",
+    "VALEUR": 147010.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '219' with value '102.7202304737516' '{
+    "idFact": 219,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.553041",
+    "VALEUR": 102.7202304737516,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '220' with value '-1.6041003888299752' '{
+    "idFact": 220,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.555071",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '221' with value '-3.9108084358523727' '{
+    "idFact": 221,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.558363",
+    "VALEUR": -3.9108084358523727,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '222' with value '22.050397480125994' '{
+    "idFact": 222,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.560416",
+    "VALEUR": 22.050397480125994,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '227' with value '0.0' '{
+    "idFact": 227,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.570078",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '228' with value '0.0' '{
+    "idFact": 228,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.573695",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '229' with value '0.0' '{
+    "idFact": 229,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.576061",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '230' with value '0' '{
+    "idFact": 230,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.578036",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '235' with value '20449.0' '{
+    "idFact": 235,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.590076",
+    "VALEUR": 20449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '236' with value '-4538.0' '{
+    "idFact": 236,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.592765",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '237' with value '-8931.0' '{
+    "idFact": 237,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.594769",
+    "VALEUR": -8931.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '238' with value '6980.0' '{
+    "idFact": 238,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.597910",
+    "VALEUR": 6980.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '239' with value '13.091549295774648' '{
+    "idFact": 239,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.600976",
+    "VALEUR": 13.091549295774648,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '240' with value '-1.6041003888299752' '{
+    "idFact": 240,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.604064",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '241' with value '-3.9239894551845342' '{
+    "idFact": 241,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.607451",
+    "VALEUR": -3.9239894551845342,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '242' with value '1.046947652617369' '{
+    "idFact": 242,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.610412",
+    "VALEUR": 1.046947652617369,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '247' with value '0.0' '{
+    "idFact": 247,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.619179",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '248' with value '0.0' '{
+    "idFact": 248,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.622385",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '249' with value '0.0' '{
+    "idFact": 249,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.625584",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '250' with value '0' '{
+    "idFact": 250,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.628080",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '255' with value '110449.0' '{
+    "idFact": 255,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.638604",
+    "VALEUR": 110449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '256' with value '-4538.0' '{
+    "idFact": 256,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.641614",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '257' with value '-8911.0' '{
+    "idFact": 257,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.644510",
+    "VALEUR": -8911.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '258' with value '97000.0' '{
+    "idFact": 258,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.647413",
+    "VALEUR": 97000.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '259' with value '70.70998719590268' '{
+    "idFact": 259,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.649480",
+    "VALEUR": 70.70998719590268,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '260' with value '-1.6041003888299752' '{
+    "idFact": 260,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.652607",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '261' with value '-3.915202108963093' '{
+    "idFact": 261,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.655085",
+    "VALEUR": -3.915202108963093,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '262' with value '14.54927253637318' '{
+    "idFact": 262,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.658296",
+    "VALEUR": 14.54927253637318,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '267' with value '0.0' '{
+    "idFact": 267,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.667455",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '268' with value '0.0' '{
+    "idFact": 268,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.669710",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '269' with value '0.0' '{
+    "idFact": 269,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.673840",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '270' with value '0' '{
+    "idFact": 270,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.676129",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '275' with value '60449.0' '{
+    "idFact": 275,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.690365",
+    "VALEUR": 60449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '276' with value '-4538.0' '{
+    "idFact": 276,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.694015",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '277' with value '-8921.0' '{
+    "idFact": 277,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.697186",
+    "VALEUR": -8921.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '278' with value '46990.0' '{
+    "idFact": 278,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.700548",
+    "VALEUR": 46990.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '279' with value '38.69974391805378' '{
+    "idFact": 279,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.703882",
+    "VALEUR": 38.69974391805378,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '280' with value '-1.6041003888299752' '{
+    "idFact": 280,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.707166",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '281' with value '-3.919595782073814' '{
+    "idFact": 281,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.710236",
+    "VALEUR": -3.919595782073814,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '282' with value '7.048147592620369' '{
+    "idFact": 282,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.713757",
+    "VALEUR": 7.048147592620369,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '287' with value '0.0' '{
+    "idFact": 287,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.723812",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '288' with value '0.0' '{
+    "idFact": 288,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.726679",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '289' with value '0.0' '{
+    "idFact": 289,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.728869",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '290' with value '0' '{
+    "idFact": 290,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.730880",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '291' with value '95' '{
+    "idFact": 291,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.734881",
+    "VALEUR": 95,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '292' with value '90' '{
+    "idFact": 292,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.737998",
+    "VALEUR": 90,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '293' with value '85' '{
+    "idFact": 293,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.741798",
+    "VALEUR": 85,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 19:40:15 DEBUG uploaded into database line '294' with value '100' '{
+    "idFact": 294,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 19:40:15.744816",
+    "VALEUR": 100,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '860' with value '106830.0' '{
+    "idFact": 860,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.616414",
+    "VALEUR": 106830.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '861' with value '86256.0' '{
+    "idFact": 861,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.620440",
+    "VALEUR": 86256.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '862' with value '-10057.0' '{
+    "idFact": 862,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.622994",
+    "VALEUR": -10057.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '863' with value '183029.0' '{
+    "idFact": 863,
+    "idObjet": 6,
+    "idCol": 128,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006012",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.626085",
+    "VALEUR": 183029.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '864' with value '68.39308578745198' '{
+    "idFact": 864,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.629104",
+    "VALEUR": 68.39308578745198,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '865' with value '30.489925768822907' '{
+    "idFact": 865,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.631365",
+    "VALEUR": 30.489925768822907,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '866' with value '-4.418717047451669' '{
+    "idFact": 866,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.634522",
+    "VALEUR": -4.418717047451669,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '867' with value '27.452977351132443' '{
+    "idFact": 867,
+    "idObjet": 6,
+    "idCol": 129,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006013",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.636709",
+    "VALEUR": 27.452977351132443,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '872' with value '0.0' '{
+    "idFact": 872,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.649332",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '873' with value '0.0' '{
+    "idFact": 873,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.652945",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '874' with value '0.0' '{
+    "idFact": 874,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.656144",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '875' with value '0' '{
+    "idFact": 875,
+    "idObjet": 6,
+    "idCol": 131,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006015",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.658835",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '880' with value '160449.0' '{
+    "idFact": 880,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.669684",
+    "VALEUR": 160449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '881' with value '-4538.0' '{
+    "idFact": 881,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.673287",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '882' with value '-8901.0' '{
+    "idFact": 882,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.675388",
+    "VALEUR": -8901.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '883' with value '147010.0' '{
+    "idFact": 883,
+    "idObjet": 6,
+    "idCol": 140,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006017",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.678463",
+    "VALEUR": 147010.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '884' with value '102.7202304737516' '{
+    "idFact": 884,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.681371",
+    "VALEUR": 102.7202304737516,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '885' with value '-1.6041003888299752' '{
+    "idFact": 885,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.683437",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '886' with value '-3.9108084358523727' '{
+    "idFact": 886,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.686576",
+    "VALEUR": -3.9108084358523727,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '887' with value '22.050397480125994' '{
+    "idFact": 887,
+    "idObjet": 6,
+    "idCol": 141,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006018",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.690329",
+    "VALEUR": 22.050397480125994,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '892' with value '0.0' '{
+    "idFact": 892,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.699608",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '893' with value '0.0' '{
+    "idFact": 893,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.703079",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '894' with value '0.0' '{
+    "idFact": 894,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.706240",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '895' with value '0' '{
+    "idFact": 895,
+    "idObjet": 6,
+    "idCol": 143,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006020",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.709052",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '900' with value '20449.0' '{
+    "idFact": 900,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.720004",
+    "VALEUR": 20449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '901' with value '-4538.0' '{
+    "idFact": 901,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.723165",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '902' with value '-8931.0' '{
+    "idFact": 902,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.725185",
+    "VALEUR": -8931.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '903' with value '6980.0' '{
+    "idFact": 903,
+    "idObjet": 6,
+    "idCol": 151,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006022",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.728228",
+    "VALEUR": 6980.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '904' with value '13.091549295774648' '{
+    "idFact": 904,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.731925",
+    "VALEUR": 13.091549295774648,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '905' with value '-1.6041003888299752' '{
+    "idFact": 905,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.734947",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '906' with value '-3.9239894551845342' '{
+    "idFact": 906,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.737958",
+    "VALEUR": -3.9239894551845342,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '907' with value '1.046947652617369' '{
+    "idFact": 907,
+    "idObjet": 6,
+    "idCol": 152,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006023",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.741170",
+    "VALEUR": 1.046947652617369,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '912' with value '0.0' '{
+    "idFact": 912,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.752395",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '913' with value '0.0' '{
+    "idFact": 913,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.755064",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '914' with value '0.0' '{
+    "idFact": 914,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.757321",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '915' with value '0' '{
+    "idFact": 915,
+    "idObjet": 6,
+    "idCol": 154,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006025",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.759406",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '920' with value '110449.0' '{
+    "idFact": 920,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.770413",
+    "VALEUR": 110449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '921' with value '-4538.0' '{
+    "idFact": 921,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.773951",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '922' with value '-8911.0' '{
+    "idFact": 922,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.776197",
+    "VALEUR": -8911.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '923' with value '97000.0' '{
+    "idFact": 923,
+    "idObjet": 6,
+    "idCol": 161,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006027",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.778873",
+    "VALEUR": 97000.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '924' with value '70.70998719590268' '{
+    "idFact": 924,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.780879",
+    "VALEUR": 70.70998719590268,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '925' with value '-1.6041003888299752' '{
+    "idFact": 925,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.784567",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '926' with value '-3.915202108963093' '{
+    "idFact": 926,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.787430",
+    "VALEUR": -3.915202108963093,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '927' with value '14.54927253637318' '{
+    "idFact": 927,
+    "idObjet": 6,
+    "idCol": 162,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006028",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.790439",
+    "VALEUR": 14.54927253637318,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '932' with value '0.0' '{
+    "idFact": 932,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.799510",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '933' with value '0.0' '{
+    "idFact": 933,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.802508",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '934' with value '0.0' '{
+    "idFact": 934,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.805537",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '935' with value '0' '{
+    "idFact": 935,
+    "idObjet": 6,
+    "idCol": 164,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006030",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.808297",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '940' with value '60449.0' '{
+    "idFact": 940,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.820695",
+    "VALEUR": 60449.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '941' with value '-4538.0' '{
+    "idFact": 941,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.823216",
+    "VALEUR": -4538.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '942' with value '-8921.0' '{
+    "idFact": 942,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.825297",
+    "VALEUR": -8921.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '943' with value '46990.0' '{
+    "idFact": 943,
+    "idObjet": 6,
+    "idCol": 171,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006032",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.827527",
+    "VALEUR": 46990.0,
+    "MSG": "[A] - [B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '944' with value '38.69974391805378' '{
+    "idFact": 944,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.830677",
+    "VALEUR": 38.69974391805378,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '945' with value '-1.6041003888299752' '{
+    "idFact": 945,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.833211",
+    "VALEUR": -1.6041003888299752,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '946' with value '-3.919595782073814' '{
+    "idFact": 946,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.836804",
+    "VALEUR": -3.919595782073814,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '947' with value '7.048147592620369' '{
+    "idFact": 947,
+    "idObjet": 6,
+    "idCol": 172,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006033",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.839355",
+    "VALEUR": 7.048147592620369,
+    "MSG": "[A]/[B]"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '952' with value '0.0' '{
+    "idFact": 952,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.847980",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '953' with value '0.0' '{
+    "idFact": 953,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.851294",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '954' with value '0.0' '{
+    "idFact": 954,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.854314",
+    "VALEUR": 0.0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '955' with value '0' '{
+    "idFact": 955,
+    "idObjet": 6,
+    "idCol": 174,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006035",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.857009",
+    "VALEUR": 0,
+    "MSG": "([A]/[B])-1"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '956' with value '95' '{
+    "idFact": 956,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 4,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R000",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.859761",
+    "VALEUR": 95,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '957' with value '90' '{
+    "idFact": 957,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 5,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R001",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.863098",
+    "VALEUR": 90,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '958' with value '85' '{
+    "idFact": 958,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 6,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R002",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.866128",
+    "VALEUR": 85,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'
+2024-08-07 20:12:52 DEBUG uploaded into database line '959' with value '100' '{
+    "idFact": 959,
+    "idObjet": 6,
+    "idCol": 4291,
+    "idRow": 7,
+    "DAT_REF": "202403",
+    "PERD": "NO",
+    "COLS_CODE": "C006037",
+    "ROWS_CODE": "R003",
+    "PERIMETRE": "CALCUL",
+    "DATE_TRT": "2024-08-07 20:12:52.869537",
+    "VALEUR": 100,
+    "MSG": "100 - ([A]+[B]+[C]+[D]+[E])"
+}'

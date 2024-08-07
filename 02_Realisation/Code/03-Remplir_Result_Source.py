@@ -1,3 +1,13 @@
+############################################################################################################
+# Module 3 : Execution du SQL
+# Auteur : Ilyass
+# dernier Maj : 07/08/2024 
+############################################################################################################
+
+
+
+
+
 from ConDB import con_to_db
 import Parametres
 from CsvRead import modify_specific_lines
@@ -35,7 +45,7 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
 
         # getting all line for the refsql table
         list_of_refsql = list()
-        query = "SELECT * FROM prm_ref_sql"
+        query = "SELECT * FROM dmrc_ref_sql"
         cur.execute(query)
         list_of_refsql = cur.fetchall()
         idFact = Parametres.next_fact_id
@@ -66,24 +76,29 @@ def remplir_cube_final_source(dateref,user,pwd,ip,schema):
                     MSG = "NO ENTRIES FOR CHOSEN PERIOD"
 
                 
+            
             # exception in the case of an error that will send the "ERROR" msg 
-
             except Exception as e : 
+                
                 logging.error(f"Can not execute refsql SQL CODE and get Calculate Value for line with id '{idSQLLigne}'"+str(e))
-                query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s)")
+                query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s)")
                 values = (idFact,idCol,idRow,idObjet,TEMPS, PERD,COL, ROW,idSQLLigne, PERIMETRE,"STATUS","ERROR","VALIDE","","","",DATE_TRT)
                 cur.execute(query,values)
-            query =("REPLACE INTO prm_ref_result ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
+                
+             
+            # if there was no error while executing the SQL we proceed by uploading the result into the DMRC_FACT table  
+            query =("REPLACE INTO dmrc_fact ""(idFACTLigne, idCols,idRows,idObjet,DAR_REF,PERD,COLS_CODE,ROWS_CODE,idSQLLigne,PERIMETRE,VALEUR,STATUS,MSG,LIEN_INVALIDE,FORMULE,FORMULE_VALORISE,FORMULE_REF,DATE_TRT)"" VALUES (%s, %s, %s, %s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s , %s,%s,%s,%s)")
             values = (idFact,idCol,idRow,idObjet,TEMPS, PERD,COL, ROW,idSQLLigne, PERIMETRE,VALEUR,"STATUS","WOOOOW","VALIDE","","","",DATE_TRT)
             
              
+            # append next line id to keep track 
             modify_specific_lines(r"C:\Users\ILYASS\Desktop\Stage\Mission\02_Realisation\Code\Parametres.py", 8 ,f"next_fact_id = {idFact}")
             idFact = idFact + 1
             
             # Execute the query with the values
             cur.execute(query,values)
 
-            query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+            query = (f"INSERT INTO dmrc_lineage ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
             values = (idCol,idRow,VALEUR,"SOURCE","","")
             cur.execute(query,values)
             # Commit the transaction

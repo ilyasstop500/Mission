@@ -1,4 +1,8 @@
-
+############################################################################################################
+# Module 2 : Generateur du lineage des résultats
+# Auteur : Ilyass
+# dernier Maj : 07/08/2024 
+############################################################################################################
 
 from ConDB import con_to_db
 from operator import itemgetter
@@ -10,13 +14,13 @@ def get_linegage(idCol,idRow,cnx,cur) :
 
     
     
-    query =(f"SELECT DISTINCT PERIMETRE  FROM PRM_REF_RESULT WHERE idCols = {idCol}" )
+    query =(f"SELECT DISTINCT PERIMETRE  FROM dmrc_fact WHERE idCols = {idCol}" )
     cur.execute(query)
     Perimetre_check = cur.fetchone()[0]
     
     if Perimetre_check == 'SOURCE' : 
         
-        query = (f"SELECT Value,Origine,Formule_valo,liste_composants FROM PRM_LINEAGE WHERE idCols ='{idCol}' AND idRows = '{idRow}'")
+        query = (f"SELECT Value,Origine,Formule_valo,liste_composants FROM dmrc_lineage WHERE idCols ='{idCol}' AND idRows = '{idRow}'")
         print(query)
         cur.execute(query)
         list_lineage = cur.fetchall()[0]
@@ -26,14 +30,14 @@ def get_linegage(idCol,idRow,cnx,cur) :
         Form = list_lineage[2]
         compo = list_lineage[3]
         
-        query =(f"INSERT INTO PRM_LINEAGE_FINAL ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+        query =(f"INSERT INTO dmrc_lineage_FINAL ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
         values = (idCol,idRow,Value,orgn,Form,compo)
         cur.execute(query,values)
         cnx.commit()
         
     else : 
         
-        query = (f"SELECT Value,Origine,Formule_valo,liste_composants FROM PRM_LINEAGE WHERE idCols ='{idCol}' AND idRows = '{idRow}'")
+        query = (f"SELECT Value,Origine,Formule_valo,liste_composants FROM dmrc_lineage WHERE idCols ='{idCol}' AND idRows = '{idRow}'")
         cur.execute(query)
         list_lineage = cur.fetchall()[0]
         print(list_lineage)
@@ -42,7 +46,7 @@ def get_linegage(idCol,idRow,cnx,cur) :
         Form = list_lineage[2]
         compo = list_lineage[3]
         
-        query =(f"INSERT INTO PRM_LINEAGE_FINAL ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+        query =(f"INSERT INTO dmrc_lineage_FINAL ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
         values = (idCol,idRow,Value,orgn,Form,compo)
         cur.execute(query,values)
         cnx.commit()
@@ -105,14 +109,14 @@ cur = cnx.cursor()
 
 
 
-query = ("SELECT DISTINCT idCols,idRows FROM PRM_REF_RESULT")
+query = ("SELECT DISTINCT idCols,idRows FROM dmrc_fact")
 cur.execute(query)
 list_cellule = cur.fetchall()
 
 
 for cellule in list_cellule :
     print(cellule)
-    query =(f"INSERT INTO PRM_LINEAGE_FINAL ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
+    query =(f"INSERT INTO dmrc_lineage_FINAL ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
     values =(None,None,None,None,None,None)
     cur.execute(query,values)
     cnx.commit()

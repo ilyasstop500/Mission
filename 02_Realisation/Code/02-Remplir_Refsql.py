@@ -1,7 +1,7 @@
 ############################################################################################################
-# Module P1 : générateur SQL
+# Module 2 : générateur SQL
 # Auteur : Ilyass
-# date : Avril 2024 
+# dernier Maj : 07/08/2024 
 ############################################################################################################
 
 
@@ -233,7 +233,7 @@ def remplir_ref_sql (dateref,user,pwd,ip,schema) :
             #upload to database ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             
             TEMPS = code_to_date("[M-00]",dateref)
-            query =("REPLACE INTO prm_ref_sql ""(idSQLLigne,idObjet,idCol,idRow,DAR_REF,PERD,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s,%s,%s)")
+            query =("REPLACE INTO dmrc_ref_sql ""(idSQLLigne,idObjet,idCol,idRow,DAR_REF,PERD,COLS_CODE,ROWS_CODE,SQL_CODE_SRC,SQL_CODE_FINAL,PERIMETRE,DATE_TRT,NIV)"" VALUES (%s, %s, %s, %s, %s,%s, %s, %s, %s, %s,%s,%s,%s)")
             values = (value, idObjet,idCol,idRow,TEMPS, PERD,COL,ROW,SQL_CODE_SRC, SQL_CODE_FINAL, PERIMETRE, DATE_TRT,NIV)
             
             # Execute the query with the values

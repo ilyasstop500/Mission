@@ -1,3 +1,12 @@
+############################################################################################################
+# Module 1 : Import des données source
+# Auteur : Ilyass
+# dernier Maj : 07/08/2024 
+############################################################################################################
+
+
+
+
 import os
 import string
 import csv
@@ -76,6 +85,9 @@ def Import_All_Csv(directory):
 
 
 Import_All_Csv(Parametres.CSVs_directory)
+
+
+
 
 
 

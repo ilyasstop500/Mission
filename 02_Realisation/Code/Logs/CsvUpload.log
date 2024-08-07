@@ -4948,3 +4948,51 @@
 2024-08-07 03:22:09 DEBUG 'FF16/prm_rows_filtre.csv' csv uploaded successfully
 2024-08-07 03:22:09 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
 2024-08-07 03:22:09 DEBUG 'FF16/prm_cols_composant.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF16'
+2024-08-07 19:35:27 DEBUG 'FF16/prm_tdb_objets.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_sql_model.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_rows.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_cols.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_cols_filtre.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_rows_filtre.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 19:35:27 DEBUG 'FF16/prm_cols_composant.csv' csv uploaded successfully
+2024-08-07 19:40:01 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF16'
+2024-08-07 19:40:02 DEBUG 'FF16/prm_tdb_objets.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_sql_model.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_rows.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_cols.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_cols_filtre.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_rows_filtre.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 19:40:02 DEBUG 'FF16/prm_cols_composant.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF16'
+2024-08-07 20:12:36 DEBUG 'FF16/prm_tdb_objets.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_sql_model.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_rows.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_cols.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_cols_filtre.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_rows_filtre.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 20:12:36 DEBUG 'FF16/prm_cols_composant.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG Initiating Csv upload from 'C:\ProgramData\MySQL\MySQL Server 8.0\Data\FF16'
+2024-08-07 20:12:42 DEBUG 'FF16/prm_tdb_objets.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_sql_model.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/vw_cube_dplt_icare_bpce_encr.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/vw_cube_vbpce_apc_faits.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_rows.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_cols.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_cols_filtre.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_rows_filtre.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_cols_calcul.csv' csv uploaded successfully
+2024-08-07 20:12:42 DEBUG 'FF16/prm_cols_composant.csv' csv uploaded successfully
