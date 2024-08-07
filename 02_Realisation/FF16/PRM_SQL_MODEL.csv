@@ -1,0 +1,3 @@
+idSQL;INDI_CODE_SQL;CODE_SQL;TEXT_SQL
+1;vw_CUBE_VBPCE_APC_FAITS;SQL_001;SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum(VALR_INDC) AS VAL FROM [p_CUBE] WHERE CODE_INDC = '[p_INDI]' GROUP BY '[p_DAR_REF]','[p_objet]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]'
+2;vw_CUBE_DPLT_ICARE_BPCE_ENCR;SQL_003;SELECT '[p_DAR_REF]' AS DAR,'[p_objet]' AS idObjet,'[p_RA]' AS RA,'[p_COL]' AS COL,'[p_ROW]' AS `ROW`,'[p_PERD]' AS PERD,Sum(VALR_INDC) AS VAL FROM [p_CUBE] WHERE CODE_INDC = '[p_INDI]' GROUP BY '[p_DAR_REF]','[p_objet]','[p_RA]','[p_COL]' ,'[p_ROW]' ,'[p_PERD]'

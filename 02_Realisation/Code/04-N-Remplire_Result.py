@@ -19,7 +19,7 @@ logging.basicConfig(
     level = logging.DEBUG,
     format = "%(asctime)s %(levelname)s %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"Mission\02_Realisation\Code\Logs\ResultCalcul.log"
+    filename=r"C:\Users\ILYASS\Desktop\Stage\Mission\02_Realisation\Code\Logs\ResultCalcul.log"
 )
 
 
@@ -191,7 +191,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
 
 
                     query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
-                    values = (idColscib,idRow,RESULTAT,"CALCUL",FORMULE_VALO,FORMULE_REF)
+                    values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,FORMULE_REF)
                     cur.execute(query,values)
 
 
@@ -245,7 +245,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     cur.execute(query,values)
 
                     query = (f"INSERT INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
-                    values = (idColscib,idRow,RESULTAT,"CALCUL",FORMULE_VALO,FORMULE_REF)
+                    values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,FORMULE_REF)
                     cur.execute(query,values)
 
                     # Commit the transaction
@@ -285,8 +285,9 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     cur.execute(query)
                     list_valeurs = list()
                     for elem in cur : 
-                        list_valeurs.append((idColscib,elem[1],elem[0]))
+                        list_valeurs.append((idColscib,elem[1],float(elem[0])))
                     list_valeurs.sort(key=itemgetter(2))
+                    list_valeurs.reverse()
                     for i in range (len(list_valeurs)) :
                         if list_valeurs[i][0] == idColscib and list_valeurs[i][1] == idRow :
                             RESULTAT = i+1
@@ -298,7 +299,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     cur.execute(query,values)
 
                     query = (f"REPLACE INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
-                    values = (idColscib,idRow,RESULTAT,"CALCUL","",composant)
+                    values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,composant)
                     cur.execute(query,values)
 
                     # Commit the transaction
@@ -367,7 +368,7 @@ def remplir_cube_final_calcul(dateref,user,pwd,ip,schema):
                     cur.execute(query,values)
 
                     query = (f"REPLACE INTO PRM_LINEAGE ""(idCols,idRows,Value,Origine,Formule_valo,liste_composants)"" VALUES (%s,%s,%s,%s,%s,%s)")
-                    values = (idColscib,idRow,RESULTAT,"CALCUL","",composant)
+                    values = (idColscib,idRow,RESULTAT,"CALCUL",FAMILLE,composant)
                     cur.execute(query,values)
 
 

@@ -10,7 +10,7 @@ logging.basicConfig(
     level = logging.DEBUG,
     format = "%(asctime)s %(levelname)s %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
-    filename=r"Mission\02_Realisation\Code\Logs\CsvUpload.log"
+    filename=r"C:\Users\ILYASS\Desktop\Stage\Mission\02_Realisation\Code\Logs\CsvUpload.log"
 )
 
 
